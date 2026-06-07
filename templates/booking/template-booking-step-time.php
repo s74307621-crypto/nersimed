@@ -176,6 +176,7 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 	'offDays'					=> $offices_off_days,
 	'customOffDays'				=> wp_list_pluck( $book_offices, 'custom_off_days', 'id' ),
 	'chunkTimes'				=> wp_list_pluck( $book_offices, 'visit_time', 'id' ),
+	'visitTimeOptions'			=> wp_list_pluck( $book_offices, 'visit_time_options', 'id' ),
 	'maxBookingDays'			=> wp_list_pluck( $book_offices, 'max_booking_days', 'id' ),
 	'nearestDateTimestamps'		=> $nearest_date_timestamps,
 	'isIranTimezone'			=> Utils::is_iran_timezone(),
@@ -215,6 +216,34 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 			'classes'	=> ['booking-times-loading']
 		] );
 		?>
+		
+		<!-- Consultation duration selector for online consultations -->
+		<?php 
+		$selected_office_data = $book_offices[$selected_office_id] ?? [];
+		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && !empty( array_filter( wp_list_pluck( $selected_office_data['visit_time_options'], 'price' ) ) ) ) { 
+		?>
+		<div class="booking-consultation-duration-selector">
+			<label class="input-label"><?php esc_html_e( 'Select consultation duration', 'drplus' ); ?></label>
+			<div class="booking-duration-options">
+				<?php 
+				foreach( $selected_office_data['visit_time_options'] as $index => $option ) {
+					if( empty( $option['price'] ) ) continue;
+					$duration_label = sprintf( _n( '%d minute', '%d minutes', $option['duration'], 'drplus' ), $option['duration'] );
+					$price_label = Formatters::price( $option['price'] );
+					$selected_class = ( $index === 0 ) ? ' selected' : '';
+					?>
+					<div class="booking-duration-option<?php echo $selected_class; ?>" data-duration-index="<?php echo $index; ?>">
+						<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
+						<span class="booking-duration-price"><?php echo esc_html( $price_label ); ?></span>
+					</div>
+					<?php
+				}
+				?>
+			</div>
+			<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0" required>
+		</div>
+		<?php } ?>
+		
 		<input type="hidden" name="booking_time" class="booking-time" id="booking-time" data-nonce="<?php echo wp_create_nonce( 'booking_available_times' ) ?>" required>
 		<span class="booking_time_empty_slot_notice"><?php echo esc_html__( 'There are no active times on the selected date.', 'drplus' ) ?></span>
 		<div class="booking-time-slots"></div>

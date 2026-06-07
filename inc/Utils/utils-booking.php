@@ -346,7 +346,7 @@ class Booking extends Utils {
 		];
 	}
 
-	public static function get_available_time_slots( $date, $specialist_id, $office_id, $chunk_duration ) {
+	public static function get_available_time_slots( $date, $specialist_id, $office_id, $chunk_duration, $duration_index = 0 ) {
 		$timezone = wp_timezone();
 		$day_index = date( 'w', strtotime( $date ) ); // Index (0 for Sunday, 6 for Saturday)
 		$date = date( 'Y-m-d', strtotime( $date ) );
@@ -357,6 +357,14 @@ class Booking extends Utils {
 			return [];
 		}
 		$office = $specialist->offices[$office_id];
+		
+		// For consultation offices with multiple duration options, use the selected duration
+		if( !empty( $office['visit_time_options'] ) && is_array( $office['visit_time_options'] ) && isset( $office['visit_time_options'][$duration_index] ) ) {
+			$selected_option = $office['visit_time_options'][$duration_index];
+			if( !empty( $selected_option['duration'] ) ) {
+				$chunk_duration = (int) $selected_option['duration'];
+			}
+		}
 
 		$office_time = Booking::get_times_by_office( $office_id, $specialist );
 		$off_days = [];

@@ -25,9 +25,10 @@ class GetAvailableTimes extends AJAX {
 		$specialist_id = Utils::convert_chars( $this->data['specialist'], true, 'absint' );
 		$office_id = Utils::convert_chars( $this->data['office'] );
 		$chunk = Utils::convert_chars( $this->data['chunk'], true, 'absint' );
+		$duration_index = isset( $this->data['duration_index'] ) ? Utils::convert_chars( $this->data['duration_index'], true, 'absint' ) : 0;
 
 		// check availability
-		$time_slots = Booking::get_available_time_slots( $date, $specialist_id, $office_id, $chunk );
+		$time_slots = Booking::get_available_time_slots( $date, $specialist_id, $office_id, $chunk, $duration_index );
 
 		$this->result( 'success', $time_slots );
 	}

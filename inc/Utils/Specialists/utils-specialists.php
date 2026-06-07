@@ -501,8 +501,29 @@ class UtilsSpecialists extends Utils {
 
 				$custom_off_days = array_values( array_unique( $custom_off_days ) );
 			}
-			$visit_price = Sanitizers::price( $data['visit_price'] );
-			$visit_time = parent::convert_chars( $data['visit_time'] ?? 0, true, 'absint' );
+			
+			// Handle visit_time_options for consultation offices
+			$visit_time_options = [];
+			if( !empty( $data['visit_time_options'] ) && is_array( $data['visit_time_options'] ) ) {
+				foreach( $data['visit_time_options'] as $option ) {
+					if( !empty( $option['duration'] ) && !empty( $option['price'] ) ) {
+						$visit_time_options[] = [
+							'duration' => absint( $option['duration'] ),
+							'price' => Sanitizers::price( $option['price'] )
+						];
+					}
+				}
+			}
+			
+			// Fallback to single visit_time and visit_price if no options provided
+			if( empty( $visit_time_options ) ) {
+				$visit_price = Sanitizers::price( $data['visit_price'] );
+				$visit_time = parent::convert_chars( $data['visit_time'] ?? 0, true, 'absint' );
+			} else {
+				$visit_price = 0; // Will be calculated based on selected duration
+				$visit_time = 0; // Will be calculated based on selected duration
+			}
+			
 			$specialist = self::get_by_user_id( $user_id );
 			$enable_booking = parent::to_bool( parent::convert_chars( $data['enable_booking'] ?? 0 ) );
 			$offices = $specialist['offices'];
@@ -513,6 +534,7 @@ class UtilsSpecialists extends Utils {
 					$offices[$index]['custom_off_days']			= $custom_off_days;
 					$offices[$index]['visit_time']				= $visit_time;
 					$offices[$index]['visit_price']				= $visit_price;
+					$offices[$index]['visit_time_options']		= $visit_time_options;
 					$offices[$index]['enable_booking']			= $enable_booking;
 					break;
 				}
@@ -1179,6 +1201,24 @@ class UtilsSpecialists extends Utils {
 				'min_time_before_book'	=> '',
 				'custom_off_days'		=> [],
 				'visit_time'			=> '30',
+                                'visit_time_options'                  => [
+                                        [
+                                                'duration'    => 10,
+                                                'price'         => 300000,
+                                        ],
+                                        [
+                                                'duration'    => 20,
+                                                'price'         => 400000,
+                                        ],
+                                        [
+                                                'duration'    => 30,
+                                                'price'         => 500000,
+                                        ],
+                                        [
+                                                'duration'    => 40,
+                                                'price'         => 600000,
+                                        ],
+                                ],
 				'visit_price'			=> '',
 				'enable_booking'		=> false,
 				'main'					=> false,
