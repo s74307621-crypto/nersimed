@@ -106,6 +106,7 @@ $offline_offices = array_filter( $offices, fn( $office ) => $office['type'] != '
 		$office_id = Utils::convert_chars( $_GET['office'] );
 		$index = array_search( $office_id, $all_offices_ids );
 		$is_instant_chat = $office_id == 'instant_chat_consultation';
+		$is_consultation = !is_numeric( $office_id ) || ( isset( $offices[$index]['type'] ) && $offices[$index]['type'] == 'consultation' );
 
 		if( is_numeric( $office_id ) ) {
 			$_office = get_post( $office_id );
@@ -116,7 +117,8 @@ $offline_offices = array_filter( $offices, fn( $office ) => $office['type'] != '
 				'custom_off_days'		=> $offices[$index]['custom_off_days'] ?? [],
 				'visit_time'			=> $offices[$index]['visit_time'],
 				'visit_price'			=> $offices[$index]['visit_price'],
-				'enable_booking'		=> $offices[$index]['enable_booking'], 
+				'enable_booking'			=> $offices[$index]['enable_booking'],
+				'visit_time_options'		=> $offices[$index]['visit_time_options'] ?? [],
 			];
 		} else {
 			if( !empty( $offices[$index] ) ) {
@@ -145,16 +147,52 @@ $offline_offices = array_filter( $offices, fn( $office ) => $office['type'] != '
 					'wrap_id'		=> 'drplus-specialist-form-times-enable_booking-wrap',
 				] );
 				if( !$is_instant_chat ) {
-					UI::input_with_label( [
-						'label'				=> esc_html__( 'Visit time duration (minutes)', 'drplus' ),
-						'type'				=> 'text',
-						'value'				=> $office['visit_time'],
-						'id'				=> "specialist_visit_time",
-						'name'				=> "specialist_visit_time",
-						'input_classes'		=> ['input-ltr', 'drplus-numeric-input'],
-						'inputmode'			=> 'numeric',
-						'required'			=> true
-					] );
+					if( $is_consultation && !empty( $office['visit_time_options'] ) && is_array( $office['visit_time_options'] ) ) {
+						// Show multiple time options for consultation offices
+						?>
+						<div class="drplus-consultation-time-options">
+							<label class="input-label"><?php esc_html_e( 'Consultation duration and price', 'drplus' ); ?></label>
+							<?php 
+							$default_durations = [10, 20, 30, 40];
+							foreach( $default_durations as $index => $duration ) {
+								$option = isset( $office['visit_time_options'][$index] ) ? $office['visit_time_options'][$index] : ['duration' => $duration, 'price' => ''];
+								?>
+								<div class="drplus-consultation-time-option-row">
+									<div class="drplus-duration-display">
+										<span><?php echo sprintf( esc_html__( '%d minutes', 'drplus' ), $duration ); ?></span>
+									</div>
+									<div class="drplus-price-input-wrap">
+										<input type="text" 
+											   name="specialist_visit_time_options[<?php echo $index; ?>][duration]" 
+											   class="input-ltr drplus-numeric-input drplus-duration-hidden" 
+											   value="<?php echo $duration; ?>" 
+											   readonly 
+											   style="display:none;">
+										<input type="text" 
+											   name="specialist_visit_time_options[<?php echo $index; ?>][price]" 
+											   class="input-ltr drplus-price-input drplus-numeric-input" 
+											   value="<?php echo Formatters::price( $option['price'] ?? '' ); ?>" 
+											   placeholder="<?php esc_attr_e( 'Enter price', 'drplus' ); ?>"
+											   inputmode="numeric">
+									</div>
+								</div>
+								<?php
+							}
+							?>
+						</div>
+						<?php
+					} else {
+						UI::input_with_label( [
+							'label'				=> esc_html__( 'Visit time duration (minutes)', 'drplus' ),
+							'type'				=> 'text',
+							'value'				=> $office['visit_time'],
+							'id'				=> "specialist_visit_time",
+							'name'				=> "specialist_visit_time",
+							'input_classes'		=> ['input-ltr', 'drplus-numeric-input'],
+							'inputmode'			=> 'numeric',
+							'required'			=> true
+						] );
+					}
 				}
 				$woocommerce_currency = get_woocommerce_currency();
 				if( in_array( $woocommerce_currency, ['IRR', 'IRT', 'IRHR', 'IRHT'] ) ) {

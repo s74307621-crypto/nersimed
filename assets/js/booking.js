@@ -167,6 +167,9 @@
 						$('.booking-times-error-alert').hide();
 						$('.booking-times-wrap').show();
 						try {
+							// Get selected duration index
+							let durationIndex = $('#booking-duration-index').val() || 0;
+							
 							const res = await $.ajax({
 								url: drplusVars.ajaxUrl,
 								type: 'POST',
@@ -176,6 +179,7 @@
 									office: selectedOfficeID,
 									specialist: bookingData.specialistID,
 									chunk: bookingData.chunkTimes[selectedOfficeID],
+									duration_index: durationIndex,
 									nonce: $('#booking-time').attr('data-nonce')
 								}
 							});
@@ -231,7 +235,20 @@
 					$('.booking-times-loading').fadeOut();
 				}
 
-				$(document).on('click', '.booking-time-slot:not(.disabled)', function() {
+				// Consultation duration selector
+			$(document).on('click', '.booking-duration-option:not(.disabled)', function() {
+				let durationIndex = $(this).data('duration-index');
+				$('#booking-duration-index').val(durationIndex);
+				$('.booking-duration-option.selected').removeClass('selected');
+				$(this).addClass('selected');
+				
+				// Trigger time reload with new duration
+				if($('#booking-date').val().length) {
+					setDayTimes($('#booking-date').val());
+				}
+			});
+
+			$(document).on('click', '.booking-time-slot:not(.disabled)', function() {
 					let timestamp = $(this).attr('data-timestamp');
 					$('#booking-time').val(timestamp).trigger('change');
 					$('.booking-time-slot.selected').removeClass('selected');

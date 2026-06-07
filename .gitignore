@@ -1,0 +1,60 @@
+```
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Dependencies
+node_modules/
+__pycache__/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.julia/
+zig*/
+target/
+.gradle/
+
+# Build artifacts
+dist/
+build/
+*.min.css
+*.min.js
+
+# Editors
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+```
