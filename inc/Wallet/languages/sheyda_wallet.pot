@@ -1,0 +1,891 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sheyda wallet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 18:40+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.9; php-8.1.33\n"
+"X-Domain: sheyda_wallet"
+
+#: Woocommerce/ProcessTopUp.php:115
+#, php-format
+msgid "%s - Topup wallet"
+msgstr ""
+
+#: AJAX.php:185
+#, php-format
+msgid "%s are required"
+msgstr ""
+
+#: WalletUtils.php:410
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:33
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:68
+msgid "Account Number"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:37
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:72
+msgid "Account owner"
+msgstr ""
+
+#: Backend/Pages/ListTables/Withdrawals.php:111
+msgid "Action"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:119
+msgctxt "action btn"
+msgid "Adjust credit"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:158
+#: Backend/Pages/ListTables/Wallets.php:57
+msgid "Actions"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:46
+msgid "Add new account"
+msgstr ""
+
+#: MenuItem.php:29
+msgid "Add the wallet balance item to your menu."
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:12
+#, php-format
+msgid "Adjust %s balance"
+msgstr ""
+
+#: Models/Ledger.php:49
+msgid "Adjust credit"
+msgstr ""
+
+#: Models/Ledger.php:50
+msgid "Adjust debit"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:55
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:94
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:148
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:153
+msgid "Admin note"
+msgstr ""
+
+#: Backend/Pages/ListTables/Withdrawals.php:174
+msgid "All"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:212
+msgid "All types (%d)"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:24
+msgid "All Wallets"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:23
+msgid "All wallets"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:48
+msgid "Allow Partial Payments using Wallet"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:38
+msgid "Allow user to request withdrawal"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-topup.php:27
+msgid "Allow Users to Deposit Funds"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:36
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:154
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:169
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:9
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:27
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:44
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:67
+#: Backend/Pages/ListTables/Withdrawals.php:108
+#: Backend/Pages/ListTables/Ledgers.php:118
+#: Backend/Pages/Wallets/class-wallet-adjust.php:41
+#: Backend/Pages/Wallets/class-wallet-adjust.php:45
+msgid "Amount"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:122
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:115
+#, php-format
+msgid "Amount (%s)"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:67
+msgid "Amount received by the user"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:114
+#, php-format
+msgid "Applied: %s %s"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:119
+msgid "Apply wallet to this order"
+msgstr ""
+
+#: Models/Withdrawals.php:56
+msgid "Approved"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:272
+msgid "Auto"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-single.php:21
+#, php-format
+msgid "Available balance: %s"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:112
+#, php-format
+msgid "Available: %s %s"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:69
+msgid "Back"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:54
+msgid "Balance"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:119
+msgid "Balance after"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:86
+msgid "Bank Info"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:60
+msgid "Bank info"
+msgstr ""
+
+#: WalletUtils.php:408
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:31
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:66
+msgid "Card Number"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:125
+msgid "Change Status to:"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:99
+msgid "Created at"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:120
+msgid "Created by"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:56
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:79
+msgid "Created date"
+msgstr ""
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:17
+msgid "Dashboard"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:157
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:190
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:28
+#: Backend/Pages/ListTables/Withdrawals.php:110
+#: Backend/Pages/ListTables/Ledgers.php:123
+msgid "Date"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:48
+msgid "Date of completion"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:32
+msgid "Decrease balance"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:29
+#: Backend/Pages/ListTables/Ledgers.php:122
+msgid "Description"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:120
+msgid "Destination account"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:95
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:79
+msgid "Details"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:43
+msgid "Enable Payment"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-topup.php:22
+msgid "Enable Top-up"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:32
+msgid "Enable wallet"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:27
+msgid "Enable/Disable"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:130
+msgid "Enter amount to pay from wallet"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:25
+msgid "Enter your desired amount..."
+msgstr ""
+
+#: WalletUtils.php:255
+msgid "Error in add ledger"
+msgstr ""
+
+#: WalletUtils.php:278
+msgid "Error in update user balance"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:19
+msgid "Failed to get withdrawal"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:177
+msgid "Failed to get withdrawal info"
+msgstr ""
+
+#: Models/Ledger.php:53
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:40
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:155
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:174
+msgid "Fee"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:224
+#, php-format
+msgid "Fee of withdrawal %s"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:70
+msgid "Fee type"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:82
+#, php-format
+msgid "Fee: %s"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:210
+msgid "Filter by type"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:14
+#: Woocommerce/MyAccount/class-wc-wallet.php:21
+msgid "Financial info"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:77
+msgid "Fixed"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings.php:19
+msgid "General"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:28
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:153
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:164
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:25
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:35
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:58
+msgid "ID"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:33
+msgid "Increase Balance"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:31
+msgid "Increase balance"
+msgstr ""
+
+#. 1: specialist name, 2: specialist subtitle
+#: Woocommerce/ProcessTopUp.php:56 Woocommerce/ProcessTopUp.php:125
+msgid "Increase Wallet balance"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:7
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:28
+msgid "Increase wallet balance"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:48
+msgid "Last transactions"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:56
+msgid "Latest update"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:20
+msgid "Ledger"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:21
+msgid "Ledgers"
+msgstr ""
+
+#: Models/Ledger.php:51
+msgid "Lock"
+msgstr ""
+
+#: WalletUtils.php:228 WalletUtils.php:239
+msgid "Lock amount can't be more than total balance"
+msgstr ""
+
+#: WalletUtils.php:190 WalletUtils.php:201
+msgid "Lock amount can't be negative."
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:33
+msgid "Lock balance"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:55
+msgid "Locked amount"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:26
+#, php-format
+msgid "Locked amount: %s %s"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-single.php:20
+#, php-format
+msgid "Locked: %s"
+msgstr ""
+
+#: MenuItem.php:31
+msgid "Menu text"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:49
+#, php-format
+msgid "Minimum withdrawal amount (%s)"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:107
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:138
+#, php-format
+msgid "Minimum withdrawal request amount is %s %s."
+msgstr ""
+
+#: Components/component-pagination-custom.php:18
+msgid "Next page"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:77
+msgid "No transactions found."
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:106
+msgid "No transactions have been recorded yet."
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:43
+msgid "No wallets available."
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:211
+msgid "No withdrawal found."
+msgstr ""
+
+#: Backend/Pages/ListTables/Withdrawals.php:97
+msgid "No withdrawal have been recorded yet."
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:56
+#: Backend/Pages/Wallets/class-wallet-adjust.php:60
+msgid "Note"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:23
+msgid "OR"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:281
+#, php-format
+msgid "Order #%s"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:327
+#, php-format
+msgid "Order %s was not completed. Wallet amount unlocked."
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:64
+msgid "Order status"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:59
+msgid "Order Status for Wallet Payment Gateway"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:64
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:89
+#, php-format
+msgid "Owner: %s"
+msgstr ""
+
+#. Hidden accessibility text.
+#: Components/component-pagination-custom.php:32
+msgid "Page"
+msgstr ""
+
+#: Models/Withdrawals.php:57
+msgid "Paid"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:305
+#, php-format
+msgid "Paid via wallet for order %s"
+msgstr ""
+
+#: Models/Withdrawals.php:55
+msgid "Pending"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:76
+msgid "Percentage"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:16
+msgid "Please enter at least one account number for use in withdrawal requests"
+msgstr ""
+
+#: Components/component-pagination-custom.php:17
+msgid "Previous page"
+msgstr ""
+
+#: Models/Ledger.php:42
+msgid "Purchase"
+msgstr ""
+
+#: Models/Ledger.php:43
+msgid "Refund"
+msgstr ""
+
+#: Models/Withdrawals.php:58
+msgid "Rejected"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:121
+msgid "Related ID"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:44
+msgid "Request date"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:100
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:39
+msgid "Request withdrawal"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:63
+msgid "Requesting user"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:240
+#, php-format
+msgid "Reserved for order %s"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-general.php:77
+#: Backend/Pages/Settings/class-settings-withdrawal.php:120
+#: Backend/Pages/Settings/class-settings-topup.php:39
+msgid "Save changes"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-list.php:16
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:41
+#: Backend/Pages/Wallets/class-wallet-transactions.php:26
+msgid "Search user"
+msgstr ""
+
+#: AJAX.php:138
+msgid "Security error"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:37
+msgid "Settings"
+msgstr ""
+
+#: WalletUtils.php:409
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:32
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:67
+msgid "Shaba Number"
+msgstr ""
+
+#. Author of the plugin
+msgid "Sheyda Team"
+msgstr ""
+
+#. Name of the plugin
+msgid "Sheyda wallet"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:32
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:156
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:179
+#: Backend/Pages/ListTables/Withdrawals.php:109
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:73
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:130
+msgid "Status"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:219
+#, php-format
+msgid ""
+"Status change from <strong>%s</strong> to <strong>%s</strong> by %s.<br> "
+"Admin notes: %s"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:142
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:50
+#: Backend/Pages/Wallets/class-wallet-adjust.php:73
+msgid "Submit"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:222
+#, php-format
+msgid "Successfully adjusted credit (%s) for %s"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:227
+#, php-format
+msgid "Successfully adjusted debit (%s) for %s"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:232
+#, php-format
+msgid "Successfully adjusted lock (%s) for %s"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:237
+#, php-format
+msgid "Successfully adjusted unlock (%s) for %s"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:163
+msgid "This note will replace the previous note."
+msgstr ""
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:18
+#: Backend/Pages/Settings/class-settings.php:29
+msgid "Top-up"
+msgstr ""
+
+#: Woocommerce/ProcessTopUp.php:102
+msgid "Top-up amount"
+msgstr ""
+
+#: Models/Ledger.php:41
+msgid "Topup"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:81
+#, php-format
+msgid "Total amount: %s"
+msgstr ""
+
+#: WalletUtils.php:214 WalletUtils.php:215
+msgid "Total balance can't be negative."
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-single.php:19
+#, php-format
+msgid "Total balance: %s"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:27 Backend/Pages/Wallets.php:109
+#: Woocommerce/MyAccount/class-wc-wallet.php:20
+msgid "Transactions"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:285
+#, php-format
+msgid "Transfer #%s"
+msgstr ""
+
+#: Models/Ledger.php:47
+msgid "Transfer in"
+msgstr ""
+
+#: Models/Ledger.php:48
+msgid "Transfer out"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:26
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:39
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:62
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:22
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:57
+#: Backend/Pages/ListTables/Ledgers.php:117
+#: Backend/Pages/Wallets/class-wallet-adjust.php:22
+#: Backend/Pages/Wallets/class-wallet-adjust.php:26
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:135
+msgid "Type"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:248
+msgid "Unable to reserve wallet funds."
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:247
+msgid "Unable to reserve wallet funds. Please try again."
+msgstr ""
+
+#: Models/Ledger.php:52
+msgid "Unlock"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:34
+msgid "Unlock balance"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:223
+#, php-format
+msgid "Unlock fee of withdrawal %s to withdraw"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:293
+#, php-format
+msgid "Unlock reserved wallet amount for order %s"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:169
+msgid "Update withdrawal status"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:110
+msgid "Updated at"
+msgstr ""
+
+#: MenuItem.php:33
+#, php-format
+msgid "Use %s anywhere in the text to show the current wallet balance."
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:109
+msgid "Use wallet balance"
+msgstr ""
+
+#: Backend/Pages/ListTables/Withdrawals.php:107
+#: Backend/Pages/ListTables/Wallets.php:53
+#: Backend/Pages/ListTables/Ledgers.php:116
+msgid "User"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:107
+msgid "Users"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:194
+#: Backend/Pages/ListTables/Withdrawals.php:241
+msgid "View"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:50
+msgid "View all"
+msgstr ""
+
+#. $page_title:string,
+#: Woocommerce/PartialPayment.php:368 Woocommerce/woocommerce.php:9
+#: Backend/Pages/Wallets.php:61 Backend/Pages/Wallets.php:62
+#: Woocommerce/MyAccount/class-wc-wallet.php:53
+#: Backend/Pages/ListTables/Wallets.php:14
+msgid "Wallet"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:316
+#, php-format
+msgid "Wallet amount charged: %s"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:253
+#, php-format
+msgid "Wallet amount reserved: %s"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:337
+#, php-format
+msgid "Wallet amount unlocked: %s"
+msgstr ""
+
+#: MenuItem.php:13 MenuItem.php:39
+msgid "Wallet balance"
+msgstr ""
+
+#: Woocommerce/ProcessTopUp.php:91
+msgid "Wallet balance successfully increased."
+msgstr ""
+
+#: MenuItem.php:26
+msgid "Wallet balance: {wallet_balance}"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:196
+msgid "Wallet payment"
+msgstr ""
+
+#: WalletUtils.php:391
+msgid "Wallet Product (Sheyda Wallet) - please do not remove or edit."
+msgstr ""
+
+#: Backend/Pages/Wallets.php:38
+msgid "Wallet Settings"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings.php:44
+#: Backend/Pages/Wallets/class-wallet-settings.php:8
+msgid "Wallet settings"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-transactions.php:10
+msgid "Wallet transactions"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:25
+msgid "Wallet withdrawals"
+msgstr ""
+
+#: Backend/Pages/ListTables/Wallets.php:15
+#: Backend/Pages/Wallets/class-wallet-list.php:8
+msgid "Wallets"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:28
+msgid "Wallets transactions"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:33
+msgid "Wallets withdrawals"
+msgstr ""
+
+#: Backend/Pages/ListTables/Ledgers.php:283
+#, php-format
+msgid "Withdraw #%s"
+msgstr ""
+
+#: Models/Ledger.php:45
+msgid "Withdraw paid"
+msgstr ""
+
+#: Models/Ledger.php:46
+msgid "Withdraw reject"
+msgstr ""
+
+#: Models/Ledger.php:44
+msgid "Withdraw request"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:103
+#, php-format
+msgid "Withdrawable credit: %s %s."
+msgstr ""
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:19
+#: Backend/Pages/Settings/class-settings.php:24
+#: Backend/Pages/ListTables/Withdrawals.php:20
+msgid "Withdrawal"
+msgstr ""
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:54
+#, php-format
+msgid "withdrawal #%s"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:24
+msgid "Withdrawal details"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:102
+msgid "withdrawal fee (%)"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:86
+#, php-format
+msgid "withdrawal fee (%s)"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:65
+msgid "withdrawal fee type"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:33
+msgid "Withdrawal status"
+msgstr ""
+
+#: Backend/Pages/Wallets.php:32 Backend/Pages/Wallets.php:111
+#: Backend/Pages/ListTables/Withdrawals.php:21
+msgid "Withdrawals"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:75
+msgid "Without fee"
+msgstr ""
+
+#: Backend/Pages/Settings/class-settings.php:80
+msgid ""
+"Woocommerce is required for wallet. please install and enable woocommerce to "
+"continue"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:134
+#, php-format
+msgid ""
+"You don't register any bank account. please add one from <a href=\"%s\">"
+"financial info section</a>"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:105
+msgid "You have insufficient amount to withdraw."
+msgstr ""
+
+#: Woocommerce/woocommerce.php:20
+msgid "Your requested amount is less than minimum withdrawal request amount"
+msgstr ""
+
+#: Woocommerce/woocommerce.php:19
+msgid "Your requested amount is more than your wallet balance"
+msgstr ""
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:24
+msgid "Your wallet balance"
+msgstr ""
+
+#: Woocommerce/PartialPayment.php:209
+msgid "Your wallet balance changed. Please re-apply the wallet amount."
+msgstr ""

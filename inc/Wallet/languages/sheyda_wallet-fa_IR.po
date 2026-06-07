@@ -1,0 +1,898 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sheyda wallet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-09 16:58+0000\n"
+"PO-Revision-Date: 2025-12-26 18:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: فارسی\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.9; php-8.1.33\n"
+"X-Domain: sheyda_wallet"
+
+#: Woocommerce/ProcessTopUp.php:115
+#, php-format
+msgid "%s - Topup wallet"
+msgstr "%s - شارژ کیف پول"
+
+#: AJAX.php:185
+#, php-format
+msgid "%s are required"
+msgstr "%s ضروری است"
+
+#: WalletUtils.php:410
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:33
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:68
+msgid "Account Number"
+msgstr "شماره حساب"
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:37
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:72
+msgid "Account owner"
+msgstr "صاحب حساب"
+
+#: Backend/Pages/ListTables/Withdrawals.php:111
+msgid "Action"
+msgstr "عملیات"
+
+#: Backend/Pages/ListTables/Wallets.php:119
+msgctxt "action btn"
+msgid "Adjust credit"
+msgstr "تغییر موجودی"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:158
+#: Backend/Pages/ListTables/Wallets.php:57
+msgid "Actions"
+msgstr "عملیات‌ها"
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:46
+msgid "Add new account"
+msgstr "افزودن حساب جدید"
+
+#: MenuItem.php:29
+msgid "Add the wallet balance item to your menu."
+msgstr "افزودن آیتم موجودی کیف پول به منو"
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:12
+#, php-format
+msgid "Adjust %s balance"
+msgstr "ویرایش اعتبار %s "
+
+#: Models/Ledger.php:49
+msgid "Adjust credit"
+msgstr "افزایش موجودی"
+
+#: Models/Ledger.php:50
+msgid "Adjust debit"
+msgstr "کاهش موجودی"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:55
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:94
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:148
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:153
+msgid "Admin note"
+msgstr "یادداشت مدیر"
+
+#: Backend/Pages/ListTables/Withdrawals.php:174
+msgid "All"
+msgstr "همه"
+
+#: Backend/Pages/ListTables/Ledgers.php:212
+msgid "All types (%d)"
+msgstr "همه (%d)"
+
+#: Backend/Pages/Wallets.php:24
+msgid "All Wallets"
+msgstr "همه کیف‌پول‌ها"
+
+#: Backend/Pages/Wallets.php:23
+msgid "All wallets"
+msgstr "همه کیف‌پول‌ها"
+
+#: Backend/Pages/Settings/class-settings-general.php:48
+msgid "Allow Partial Payments using Wallet"
+msgstr "امکان پرداخت‌های جزئی با استفاده از کیف پول"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:38
+msgid "Allow user to request withdrawal"
+msgstr "اجازه به کاربر برای درخواست برداشت"
+
+#: Backend/Pages/Settings/class-settings-topup.php:27
+msgid "Allow Users to Deposit Funds"
+msgstr "امکان افزایش موجودی توسط کاربر"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:36
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:154
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:169
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:9
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:27
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:44
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:67
+#: Backend/Pages/ListTables/Withdrawals.php:108
+#: Backend/Pages/ListTables/Ledgers.php:118
+#: Backend/Pages/Wallets/class-wallet-adjust.php:41
+#: Backend/Pages/Wallets/class-wallet-adjust.php:45
+msgid "Amount"
+msgstr "مبلغ"
+
+#: Woocommerce/PartialPayment.php:122
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:115
+#, php-format
+msgid "Amount (%s)"
+msgstr "مبلغ (%s)"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:67
+msgid "Amount received by the user"
+msgstr "مبلغ دریافت‌شده توسط کاربر"
+
+#: Woocommerce/PartialPayment.php:114
+#, php-format
+msgid "Applied: %s %s"
+msgstr "اعمال شده: %s %s"
+
+#: Woocommerce/PartialPayment.php:119
+msgid "Apply wallet to this order"
+msgstr "استفاده از کیف پول برای این سفارش"
+
+#: Models/Withdrawals.php:56
+msgid "Approved"
+msgstr "تایید شده"
+
+#: Backend/Pages/ListTables/Ledgers.php:272
+msgid "Auto"
+msgstr "خودکار"
+
+#: Backend/Pages/Wallets/class-wallet-single.php:21
+#, php-format
+msgid "Available balance: %s"
+msgstr "موجودی قابل استفاده:‌ %s"
+
+#: Woocommerce/PartialPayment.php:112
+#, php-format
+msgid "Available: %s %s"
+msgstr "دردسترس: %s %s"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:69
+msgid "Back"
+msgstr "بازگشت"
+
+#: Backend/Pages/ListTables/Wallets.php:54
+msgid "Balance"
+msgstr "موجودی"
+
+#: Backend/Pages/ListTables/Ledgers.php:119
+msgid "Balance after"
+msgstr "موجودی بعد از تراکنش"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:86
+msgid "Bank Info"
+msgstr "اطلاعات بانکی"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:60
+msgid "Bank info"
+msgstr "اطلاعات بانکی"
+
+#: WalletUtils.php:408
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:31
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:66
+msgid "Card Number"
+msgstr "شماره کارت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:125
+msgid "Change Status to:"
+msgstr "تغییر وضعیت به:"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:99
+msgid "Created at"
+msgstr "تاریخ ایجاد"
+
+#: Backend/Pages/ListTables/Ledgers.php:120
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:56
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:79
+msgid "Created date"
+msgstr "تاریخ ایجاد"
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:17
+msgid "Dashboard"
+msgstr "پیشخوان"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:157
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:190
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:28
+#: Backend/Pages/ListTables/Withdrawals.php:110
+#: Backend/Pages/ListTables/Ledgers.php:123
+msgid "Date"
+msgstr "تاریخ"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:48
+msgid "Date of completion"
+msgstr "تاریخ انجام"
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:32
+msgid "Decrease balance"
+msgstr "کاهش موجودی"
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:29
+#: Backend/Pages/ListTables/Ledgers.php:122
+msgid "Description"
+msgstr "توضیحات"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:120
+msgid "Destination account"
+msgstr "حساب مقصد"
+
+#: Backend/Pages/ListTables/Wallets.php:95
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:79
+msgid "Details"
+msgstr "جزئیات"
+
+#: Backend/Pages/Settings/class-settings-general.php:43
+msgid "Enable Payment"
+msgstr "فعال‌سازی پرداخت"
+
+#: Backend/Pages/Settings/class-settings-topup.php:22
+msgid "Enable Top-up"
+msgstr "فعال‌سازی شارژ کیف پول"
+
+#: Backend/Pages/Settings/class-settings-general.php:32
+msgid "Enable wallet"
+msgstr "فعال‌سازی کیف پول"
+
+#: Backend/Pages/Settings/class-settings-general.php:27
+msgid "Enable/Disable"
+msgstr "فعال/غیرفعال"
+
+#: Woocommerce/PartialPayment.php:130
+msgid "Enter amount to pay from wallet"
+msgstr "مبلغ موردنظر"
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:25
+msgid "Enter your desired amount..."
+msgstr "مبلغ مورد نظر خود را وارد کنید…"
+
+#: WalletUtils.php:255
+msgid "Error in add ledger"
+msgstr "خطا در افزودن سند حسابداری"
+
+#: WalletUtils.php:278
+msgid "Error in update user balance"
+msgstr "خطا در بروزرسانی موجودی کاربر"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:19
+msgid "Failed to get withdrawal"
+msgstr "خطا در گرفتن اطلاعات درخواست برداشت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:177
+msgid "Failed to get withdrawal info"
+msgstr "گرفتن اطلاعات درخواست برداشت با خطا مواجه شد"
+
+#: Models/Ledger.php:53
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:40
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:155
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:174
+msgid "Fee"
+msgstr "کارمزد"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:224
+#, php-format
+msgid "Fee of withdrawal %s"
+msgstr "کارمزد برداشت شناسه %s"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:70
+msgid "Fee type"
+msgstr "نوع کارمزد"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:82
+#, php-format
+msgid "Fee: %s"
+msgstr "کارمزد: %s"
+
+#: Backend/Pages/ListTables/Ledgers.php:210
+msgid "Filter by type"
+msgstr "فیلتر بر اساس نوع"
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:14
+#: Woocommerce/MyAccount/class-wc-wallet.php:21
+msgid "Financial info"
+msgstr "اطلاعات مالی"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:77
+msgid "Fixed"
+msgstr "ثابت"
+
+#: Backend/Pages/Settings/class-settings.php:19
+msgid "General"
+msgstr "عمومی"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:28
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:153
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:164
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:25
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:35
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:58
+msgid "ID"
+msgstr "شناسه"
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:33
+msgid "Increase Balance"
+msgstr "افزایش موجودی"
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:31
+msgid "Increase balance"
+msgstr "افزایش موجودی"
+
+#. 1: specialist name, 2: specialist subtitle
+#: Woocommerce/ProcessTopUp.php:56 Woocommerce/ProcessTopUp.php:125
+msgid "Increase Wallet balance"
+msgstr "افزایش موجودی کیف پول"
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:7
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:28
+msgid "Increase wallet balance"
+msgstr "افزایش موجودی کیف پول"
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:48
+msgid "Last transactions"
+msgstr "آخرین تراکنش‌ها"
+
+#: Backend/Pages/ListTables/Wallets.php:56
+msgid "Latest update"
+msgstr "آخرین بروزرسانی"
+
+#: Backend/Pages/ListTables/Ledgers.php:20
+msgid "Ledger"
+msgstr "سند حسابداری"
+
+#: Backend/Pages/ListTables/Ledgers.php:21
+msgid "Ledgers"
+msgstr "اسناد حسابداری"
+
+#: Models/Ledger.php:51
+msgid "Lock"
+msgstr "قفل"
+
+#: WalletUtils.php:228 WalletUtils.php:239
+msgid "Lock amount can't be more than total balance"
+msgstr "مبلغ قفل‌شده نمی‌تواند بیشتر از کل موجودی باشد."
+
+#: WalletUtils.php:190 WalletUtils.php:201
+msgid "Lock amount can't be negative."
+msgstr "مبلغ قفل‌شده نمی‌تواند منفی باشد."
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:33
+msgid "Lock balance"
+msgstr "قفل موجودی"
+
+#: Backend/Pages/ListTables/Wallets.php:55
+msgid "Locked amount"
+msgstr "مبلغ قفل شده"
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:26
+#, php-format
+msgid "Locked amount: %s %s"
+msgstr "مبلغ قفل شده: %s %s"
+
+#: Backend/Pages/Wallets/class-wallet-single.php:20
+#, php-format
+msgid "Locked: %s"
+msgstr "قفل شده:‌ %s"
+
+#: MenuItem.php:31
+msgid "Menu text"
+msgstr "متن آیتم منو"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:49
+#, php-format
+msgid "Minimum withdrawal amount (%s)"
+msgstr "حداقل مبلغ قابل برداشت (%s)"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:107
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:138
+#, php-format
+msgid "Minimum withdrawal request amount is %s %s."
+msgstr "حداقل مبلغ درخواست برداشت %s %s است."
+
+#: Components/component-pagination-custom.php:18
+msgid "Next page"
+msgstr "صفحه بعد"
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:77
+msgid "No transactions found."
+msgstr "هیچ تراکنشی یافت نشد."
+
+#: Backend/Pages/ListTables/Ledgers.php:106
+msgid "No transactions have been recorded yet."
+msgstr "هیچ تراکنشی تاکنون ثبت نشده است."
+
+#: Backend/Pages/ListTables/Wallets.php:43
+msgid "No wallets available."
+msgstr "هیچ کیف پولی موجود نیست."
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:211
+msgid "No withdrawal found."
+msgstr "هیچ درخواست برداشتی ثبت نشده است."
+
+#: Backend/Pages/ListTables/Withdrawals.php:97
+msgid "No withdrawal have been recorded yet."
+msgstr "تاکنون هیچ درخواست برداشتی ثبت نشده است."
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:56
+#: Backend/Pages/Wallets/class-wallet-adjust.php:60
+msgid "Note"
+msgstr "یادداشت"
+
+#: Woocommerce/MyAccount/template-wc-wallet-topup.php:23
+msgid "OR"
+msgstr "یا"
+
+#: Backend/Pages/ListTables/Ledgers.php:281
+#, php-format
+msgid "Order #%s"
+msgstr "سفارش #%s"
+
+#: Woocommerce/PartialPayment.php:327
+#, php-format
+msgid "Order %s was not completed. Wallet amount unlocked."
+msgstr "سفارش %s تکمیل نشد. مبلغ کیف پول آزاد شد."
+
+#: Backend/Pages/Settings/class-settings-general.php:64
+msgid "Order status"
+msgstr "وضعیت سفارش"
+
+#: Backend/Pages/Settings/class-settings-general.php:59
+msgid "Order Status for Wallet Payment Gateway"
+msgstr "وضعیت سفارش برای پرداخت با کیف پول"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:64
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:89
+#, php-format
+msgid "Owner: %s"
+msgstr "صاحب:‌ %s"
+
+#. Hidden accessibility text.
+#: Components/component-pagination-custom.php:32
+msgid "Page"
+msgstr "صفحه"
+
+#: Models/Withdrawals.php:57
+msgid "Paid"
+msgstr "پرداخت شده"
+
+#: Woocommerce/PartialPayment.php:305
+#, php-format
+msgid "Paid via wallet for order %s"
+msgstr "پرداخت شده با کیف پول برای سفارش %s"
+
+#: Models/Withdrawals.php:55
+msgid "Pending"
+msgstr "در انتظار"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:76
+msgid "Percentage"
+msgstr "درصد"
+
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:16
+msgid "Please enter at least one account number for use in withdrawal requests"
+msgstr "لطفاً حداقل یک شماره حساب برای استفاده در درخواست‌های برداشت وارد کنید"
+
+#: Components/component-pagination-custom.php:17
+msgid "Previous page"
+msgstr "صفحه قبل"
+
+#: Models/Ledger.php:42
+msgid "Purchase"
+msgstr "خرید"
+
+#: Models/Ledger.php:43
+msgid "Refund"
+msgstr "بازپرداخت"
+
+#: Models/Withdrawals.php:58
+msgid "Rejected"
+msgstr "رد شده"
+
+#: Backend/Pages/ListTables/Ledgers.php:121
+msgid "Related ID"
+msgstr "شناسه مرتبط"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:44
+msgid "Request date"
+msgstr "تاریخ درخواست"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:100
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:39
+msgid "Request withdrawal"
+msgstr "درخواست برداشت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:63
+msgid "Requesting user"
+msgstr "کاربر درخواست‌دهنده"
+
+#: Woocommerce/PartialPayment.php:240
+#, php-format
+msgid "Reserved for order %s"
+msgstr "رزرو شده برای سفارش %s"
+
+#: Backend/Pages/Settings/class-settings-general.php:77
+#: Backend/Pages/Settings/class-settings-withdrawal.php:120
+#: Backend/Pages/Settings/class-settings-topup.php:39
+msgid "Save changes"
+msgstr "ذخیره تغییرات"
+
+#: Backend/Pages/Wallets/class-wallet-list.php:16
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:41
+#: Backend/Pages/Wallets/class-wallet-transactions.php:26
+msgid "Search user"
+msgstr "جست‌وجوی کاربر"
+
+#: AJAX.php:138
+msgid "Security error"
+msgstr "خطای امنیتی"
+
+#: Backend/Pages/Wallets.php:37
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: WalletUtils.php:409
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:32
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:67
+msgid "Shaba Number"
+msgstr "شماره شبا"
+
+#. Author of the plugin
+msgid "Sheyda Team"
+msgstr "تیم شیدا"
+
+#. Name of the plugin
+msgid "Sheyda wallet"
+msgstr "کیف پول شیدا"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:32
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:156
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:179
+#: Backend/Pages/ListTables/Withdrawals.php:109
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:73
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:130
+msgid "Status"
+msgstr "وضعیت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:219
+#, php-format
+msgid ""
+"Status change from <strong>%s</strong> to <strong>%s</strong> by %s.<br> "
+"Admin notes: %s"
+msgstr ""
+"تغییر وضعیت از <strong>%s</strong> به <strong>%s</strong> توسط %s.<br> "
+"یادداشت‌های مدیر: %s"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:142
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:50
+#: Backend/Pages/Wallets/class-wallet-adjust.php:73
+msgid "Submit"
+msgstr "ثبت"
+
+#: Backend/Pages/Wallets.php:222
+#, php-format
+msgid "Successfully adjusted credit (%s) for %s"
+msgstr "اعتبار با موفقیت به مبلغ (%s) برای %s افزایش یافت."
+
+#: Backend/Pages/Wallets.php:227
+#, php-format
+msgid "Successfully adjusted debit (%s) for %s"
+msgstr "اعتبار با موفقیت به مبلغ (%s) برای %s کاهش یافت."
+
+#: Backend/Pages/Wallets.php:232
+#, php-format
+msgid "Successfully adjusted lock (%s) for %s"
+msgstr "اعتبار با موفقیت به مبلغ (%s) برای %s قفل شد."
+
+#: Backend/Pages/Wallets.php:237
+#, php-format
+msgid "Successfully adjusted unlock (%s) for %s"
+msgstr "اعتبار با موفقیت به مبلغ (%s) برای %s آزاد شد."
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:163
+msgid "This note will replace the previous note."
+msgstr "این یادداشت جایگزین یادداشت قبلی خواهد شد."
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:18
+#: Backend/Pages/Settings/class-settings.php:29
+msgid "Top-up"
+msgstr "شارژ کیف پول"
+
+#: Woocommerce/ProcessTopUp.php:102
+msgid "Top-up amount"
+msgstr "مبلغ شارژ"
+
+#: Models/Ledger.php:41
+msgid "Topup"
+msgstr "شارژ کیف پول"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:81
+#, php-format
+msgid "Total amount: %s"
+msgstr "مبلغ شارژ:‌ %s"
+
+#: WalletUtils.php:214 WalletUtils.php:215
+msgid "Total balance can't be negative."
+msgstr "موجودی کل نمی‌تواند منفی باشد."
+
+#: Backend/Pages/Wallets/class-wallet-single.php:19
+#, php-format
+msgid "Total balance: %s"
+msgstr "موجودی کل:‌ %s"
+
+#: Backend/Pages/Wallets.php:27 Backend/Pages/Wallets.php:109
+#: Woocommerce/MyAccount/class-wc-wallet.php:20
+msgid "Transactions"
+msgstr "تراکنش‌ها"
+
+#: Backend/Pages/ListTables/Ledgers.php:285
+#, php-format
+msgid "Transfer #%s"
+msgstr "انتقال #%s"
+
+#: Models/Ledger.php:47
+msgid "Transfer in"
+msgstr "واریز از کاربر دیگر"
+
+#: Models/Ledger.php:48
+msgid "Transfer out"
+msgstr "واریز به کاربر دیگر"
+
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:26
+#: Woocommerce/MyAccount/template-wc-wallet-transactions.php:39
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:62
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:22
+#: Woocommerce/MyAccount/template-wc-wallet-financial.php:57
+#: Backend/Pages/ListTables/Ledgers.php:117
+#: Backend/Pages/Wallets/class-wallet-adjust.php:22
+#: Backend/Pages/Wallets/class-wallet-adjust.php:26
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:135
+msgid "Type"
+msgstr "نوع"
+
+#: Woocommerce/PartialPayment.php:248
+msgid "Unable to reserve wallet funds."
+msgstr "عدم امکان رزرو موجودی کیف پول"
+
+#: Woocommerce/PartialPayment.php:247
+msgid "Unable to reserve wallet funds. Please try again."
+msgstr "عدم امکان رزرو موجودی کیف پول. لطفاً دوباره تلاش کنید."
+
+#: Models/Ledger.php:52
+msgid "Unlock"
+msgstr "آزادسازی"
+
+#: Backend/Pages/Wallets/class-wallet-adjust.php:34
+msgid "Unlock balance"
+msgstr "آزادسازی موجودی"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:223
+#, php-format
+msgid "Unlock fee of withdrawal %s to withdraw"
+msgstr "آزادسازی کارمزد برداشت %s برای انجام برداشت"
+
+#: Woocommerce/PartialPayment.php:293
+#, php-format
+msgid "Unlock reserved wallet amount for order %s"
+msgstr "آزادسازی مبلغ رزرو‌شده کیف پول برای سفارش %s"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:169
+msgid "Update withdrawal status"
+msgstr "به‌روزرسانی وضعیت برداشت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:110
+msgid "Updated at"
+msgstr "بروزرسانی شده در"
+
+#: MenuItem.php:33
+#, php-format
+msgid "Use %s anywhere in the text to show the current wallet balance."
+msgstr ""
+"از %s در هر جای متن استفاده کنید تا موجودی فعلی کیف پول نمایش داده شود."
+
+#: Woocommerce/PartialPayment.php:109
+msgid "Use wallet balance"
+msgstr "استفاده از موجودی کیف پول"
+
+#: Backend/Pages/ListTables/Withdrawals.php:107
+#: Backend/Pages/ListTables/Wallets.php:53
+#: Backend/Pages/ListTables/Ledgers.php:116
+msgid "User"
+msgstr "کاربر"
+
+#: Backend/Pages/Wallets.php:107
+msgid "Users"
+msgstr "کاربران"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:194
+#: Backend/Pages/ListTables/Withdrawals.php:241
+msgid "View"
+msgstr "مشاهده"
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:50
+msgid "View all"
+msgstr "مشاهده همه"
+
+#. $page_title:string,
+#: Woocommerce/PartialPayment.php:368 Woocommerce/woocommerce.php:9
+#: Backend/Pages/Wallets.php:61 Backend/Pages/Wallets.php:62
+#: Woocommerce/MyAccount/class-wc-wallet.php:53
+#: Backend/Pages/ListTables/Wallets.php:14
+msgid "Wallet"
+msgstr "کیف پول"
+
+#: Woocommerce/PartialPayment.php:316
+#, php-format
+msgid "Wallet amount charged: %s"
+msgstr "مبلغ کسرشده از کیف پول: %s"
+
+#: Woocommerce/PartialPayment.php:253
+#, php-format
+msgid "Wallet amount reserved: %s"
+msgstr "مبلغ رزرو‌شده از کیف پول: %s"
+
+#: Woocommerce/PartialPayment.php:337
+#, php-format
+msgid "Wallet amount unlocked: %s"
+msgstr "مبلغ آزادشده از کیف پول: %s"
+
+#: MenuItem.php:13 MenuItem.php:39
+msgid "Wallet balance"
+msgstr "موجودی کیف پول"
+
+#: Woocommerce/ProcessTopUp.php:91
+msgid "Wallet balance successfully increased."
+msgstr "موجودی کیف پول با موفقیت افزایش یافت."
+
+#: MenuItem.php:26
+msgid "Wallet balance: {wallet_balance}"
+msgstr "موجودی کیف پول: {wallet_balance}"
+
+#: Woocommerce/PartialPayment.php:196
+msgid "Wallet payment"
+msgstr "پرداخت با کیف پول"
+
+#: WalletUtils.php:391
+msgid "Wallet Product (Sheyda Wallet) - please do not remove or edit."
+msgstr "محصول کیف پول (کیف پول شیدا) - لطفاً آن را حذف یا ویرایش نکنید."
+
+#: Backend/Pages/Wallets.php:38
+msgid "Wallet Settings"
+msgstr "تنظیمات کیف پول"
+
+#: Backend/Pages/Settings/class-settings.php:44
+#: Backend/Pages/Wallets/class-wallet-settings.php:8
+msgid "Wallet settings"
+msgstr "تنظیمات کیف پول"
+
+#: Backend/Pages/Wallets/class-wallet-transactions.php:10
+msgid "Wallet transactions"
+msgstr "تراکنش‌های کیف پول"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:25
+msgid "Wallet withdrawals"
+msgstr "درخواست‌های برداشت کیف پول"
+
+#: Backend/Pages/ListTables/Wallets.php:15
+#: Backend/Pages/Wallets/class-wallet-list.php:8
+msgid "Wallets"
+msgstr "کیف‌پول‌ها"
+
+#: Backend/Pages/Wallets.php:28
+msgid "Wallets transactions"
+msgstr "تراکنش‌ کیف پول‌ها"
+
+#: Backend/Pages/Wallets.php:33
+msgid "Wallets withdrawals"
+msgstr "درخواست‌ برداشت کیف پول‌ها"
+
+#: Backend/Pages/ListTables/Ledgers.php:283
+#, php-format
+msgid "Withdraw #%s"
+msgstr "برداشت #%s"
+
+#: Models/Ledger.php:45
+msgid "Withdraw paid"
+msgstr "برداشت"
+
+#: Models/Ledger.php:46
+msgid "Withdraw reject"
+msgstr "رد درخواست برداشت"
+
+#: Models/Ledger.php:44
+msgid "Withdraw request"
+msgstr "درخواست برداشت"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:103
+#, php-format
+msgid "Withdrawable credit: %s %s."
+msgstr "موجودی قابل برداشت: %s %s."
+
+#: Woocommerce/MyAccount/class-wc-wallet.php:19
+#: Backend/Pages/Settings/class-settings.php:24
+#: Backend/Pages/ListTables/Withdrawals.php:20
+msgid "Withdrawal"
+msgstr "برداشت"
+
+#: Backend/Pages/Wallets/class-wallet-withdrawals.php:54
+#, php-format
+msgid "withdrawal #%s"
+msgstr "برداشت #%s"
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:24
+msgid "Withdrawal details"
+msgstr "جزئیات برداشت"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:102
+msgid "withdrawal fee (%)"
+msgstr "کارمزد برداشت (٪)"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:86
+#, php-format
+msgid "withdrawal fee (%s)"
+msgstr "کارمزد برداشت (%s)"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:65
+msgid "withdrawal fee type"
+msgstr "نوع کارمزد برداشت"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:33
+msgid "Withdrawal status"
+msgstr "وضعیت درخواست برداشت"
+
+#: Backend/Pages/Wallets.php:32 Backend/Pages/Wallets.php:111
+#: Backend/Pages/ListTables/Withdrawals.php:21
+msgid "Withdrawals"
+msgstr "برداشت‌ها"
+
+#: Backend/Pages/Settings/class-settings-withdrawal.php:75
+msgid "Without fee"
+msgstr "بدون کارمزد"
+
+#: Backend/Pages/Settings/class-settings.php:80
+msgid ""
+"Woocommerce is required for wallet. please install and enable woocommerce to "
+"continue"
+msgstr ""
+"برای استفاده از کیف پول، ووکامرس لازم است. لطفاً ووکامرس را نصب و فعال کنید "
+"تا ادامه دهید."
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:134
+#, php-format
+msgid ""
+"You don't register any bank account. please add one from <a href=\"%s\">"
+"financial info section</a>"
+msgstr ""
+"شما هیچ حساب بانکی‌ای ثبت نکرده‌اید. لطفاً یک حساب از بخش <a href=\"%s\">"
+"اطلاعات مالی</a> اضافه کنید."
+
+#: Woocommerce/MyAccount/template-wc-wallet-withdrawal.php:105
+msgid "You have insufficient amount to withdraw."
+msgstr "شما موجودی کافی برای برداشت ندارید."
+
+#: Woocommerce/woocommerce.php:20
+msgid "Your requested amount is less than minimum withdrawal request amount"
+msgstr "مبلغ درخواستی شما کمتر از حداقل مبلغ مجاز برای برداشت است."
+
+#: Woocommerce/woocommerce.php:19
+msgid "Your requested amount is more than your wallet balance"
+msgstr "مبلغ درخواستی شما بیشتر از موجودی کیف پولتان است."
+
+#: Woocommerce/MyAccount/template-wc-wallet-dashboard.php:24
+msgid "Your wallet balance"
+msgstr "موجودی کیف پول شما"
+
+#: Woocommerce/PartialPayment.php:209
+msgid "Your wallet balance changed. Please re-apply the wallet amount."
+msgstr ""
+"موجودی کیف پول شما تغییر کرده است. لطفاً مبلغ کیف پول را دوباره اعمال کنید."
