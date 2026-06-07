@@ -6,6 +6,7 @@ use DrPlus\Components\Loading;
 use DrPlus\Components\SectionTitle;
 use DrPlus\Utils;
 use DrPlus\Utils\Booking;
+use DrPlus\Utils\Formatters;
 use DrPlus\Utils\Options;
 use MJ\Whitebox\Utils as WhiteboxUtils;
 
@@ -223,12 +224,12 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && !empty( array_filter( wp_list_pluck( $selected_office_data['visit_time_options'], 'price' ) ) ) ) { 
 		?>
 		<div class="booking-consultation-duration-selector">
-			<label class="input-label"><?php esc_html_e( 'Select consultation duration', 'drplus' ); ?></label>
+			<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
 			<div class="booking-duration-options">
 				<?php 
 				foreach( $selected_office_data['visit_time_options'] as $index => $option ) {
 					if( empty( $option['price'] ) ) continue;
-					$duration_label = sprintf( _n( '%d minute', '%d minutes', $option['duration'], 'drplus' ), $option['duration'] );
+					$duration_label = sprintf( _n( '%d دقیقه', '%d دقیقه', $option['duration'], 'drplus' ), $option['duration'] );
 					$price_label = Formatters::price( $option['price'] );
 					$selected_class = ( $index === 0 ) ? ' selected' : '';
 					?>
@@ -245,7 +246,7 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 		<?php } ?>
 		
 		<input type="hidden" name="booking_time" class="booking-time" id="booking-time" data-nonce="<?php echo wp_create_nonce( 'booking_available_times' ) ?>" required>
-		<span class="booking_time_empty_slot_notice"><?php echo esc_html__( 'There are no active times on the selected date.', 'drplus' ) ?></span>
+		<span class="booking_time_empty_slot_notice"><?php echo esc_html__( 'هیچ زمانی در تاریخ انتخاب شده موجود نیست.', 'drplus' ) ?></span>
 		<div class="booking-time-slots"></div>
 	</div>
 

@@ -276,14 +276,34 @@ class Booking extends Utils {
 						</a>
 					<?php } ?>
 				</div>
-				<?php if( $show_price ) { ?>
-					<div class="booking-specialist-office-price">
-						<?php
-						$price = !empty( $office['visit_price'] ) ? sprintf( Formatters::price( $office['visit_price'], true ) ) : esc_html__( 'Free!', 'drplus' );
-						echo apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price, $office );
-						?>
-					</div>
-				<?php } ?>
+					<?php if( $show_price ) { ?>
+						<div class="booking-specialist-office-price">
+							<?php
+							if( $office['type'] == 'consultation' && !empty( $office['visit_time_options'] ) && is_array( $office['visit_time_options'] ) ) {
+								// Find minimum price from options
+								$min_price = null;
+								foreach( $office['visit_time_options'] as $option ) {
+									if( !empty( $option['price'] ) ) {
+										$price_val = floatval( $option['price'] );
+										if( $min_price === null || $price_val < $min_price ) {
+											$min_price = $price_val;
+										}
+									}
+								}
+								if( $min_price !== null && $min_price > 0 ) {
+									$price = sprintf( Formatters::price( $min_price, true ) );
+								} else {
+									$price = esc_html__( 'Free!', 'drplus' );
+								}
+								// Add class for multiple durations
+								echo '<span class="has-multiple-durations">' . apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price, $office ) . '</span>';
+							} else {
+								$price = !empty( $office['visit_price'] ) ? sprintf( Formatters::price( $office['visit_price'], true ) ) : esc_html__( 'Free!', 'drplus' );
+								echo apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price, $office );
+							}
+							?>
+						</div>
+					<?php } ?>
 			</div>
 			<?php if( !empty( $office['address'] ) ) { ?>
 				<p class="booking-specialist-office-address"><?php echo esc_html( $office['address'] ) ?></p>
