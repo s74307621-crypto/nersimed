@@ -214,6 +214,34 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 		'icon'	=> $options['booking-time-section-icon']
 	] ); ?>
 
+	<!-- Consultation duration selector for online consultations - MUST be before calendar -->
+	<?php 
+	$selected_office_data = $book_offices[$selected_office_id] ?? [];
+	// Show duration selector ONLY for consultation (online) offices
+	if( $selected_office_data['type'] == 'consultation' && !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) ) { 
+	?>
+	<div class="booking-consultation-duration-selector">
+		<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
+		<div class="booking-duration-options">
+			<?php 
+			foreach( $selected_office_data['visit_time_options'] as $index => $option ) {
+				$duration_label = sprintf( _n( '%d دقیقه', '%d دقیقه', $option['duration'], 'drplus' ), $option['duration'] );
+				$price_label = !empty( $option['price'] ) ? Formatters::price( $option['price'] ) : __( 'تعیین نشده', 'drplus' );
+				$selected_class = ( $index === 0 ) ? ' selected' : '';
+				$disabled_class = empty( $option['price'] ) ? ' disabled' : '';
+				?>
+				<div class="booking-duration-option<?php echo $selected_class . $disabled_class; ?>" data-duration-index="<?php echo $index; ?>">
+					<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
+					<span class="booking-duration-price"><?php echo esc_html( sprintf( __( 'شروع قیمت از %s', 'drplus' ), $price_label ) ); ?></span>
+				</div>
+				<?php
+			}
+			?>
+		</div>
+		<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0" required>
+	</div>
+	<?php } ?>
+
 	<div class="booking-calendar-wrap">
 		<input type="hidden" name="booking_date" class="booking-date-calendar" id="booking-date" value="<?php echo $nearest_date_timestamps[$selected_office_id] ?>" required>
 	</div>
@@ -224,36 +252,6 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 			'classes'	=> ['booking-times-loading']
 		] );
 		?>
-		
-		<!-- Consultation duration selector for online consultations -->
-		<?php 
-		$selected_office_data = $book_offices[$selected_office_id] ?? [];
-		// Show duration selector for consultation (online) offices if visit_time_options exists
-		// Don't filter by price here - show all options and let JS handle disabled state
-		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && $selected_office_data['type'] == 'consultation' ) { 
-		?>
-		<div class="booking-consultation-duration-selector">
-			<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
-			<div class="booking-duration-options">
-				<?php 
-				foreach( $selected_office_data['visit_time_options'] as $index => $option ) {
-					// Show all duration options regardless of price (price might be empty initially)
-					$duration_label = sprintf( _n( '%d دقیقه', '%d دقیقه', $option['duration'], 'drplus' ), $option['duration'] );
-					$price_label = !empty( $option['price'] ) ? Formatters::price( $option['price'] ) : __( 'تعیین نشده', 'drplus' );
-					$selected_class = ( $index === 0 ) ? ' selected' : '';
-					$disabled_class = empty( $option['price'] ) ? ' disabled' : '';
-					?>
-					<div class="booking-duration-option<?php echo $selected_class . $disabled_class; ?>" data-duration-index="<?php echo $index; ?>">
-						<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
-						<span class="booking-duration-price"><?php echo esc_html( sprintf( __( 'شروع قیمت از %s', 'drplus' ), $price_label ) ); ?></span>
-					</div>
-					<?php
-				}
-				?>
-			</div>
-			<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0" required>
-		</div>
-		<?php } ?>
 		
 		<input type="hidden" name="booking_time" class="booking-time" id="booking-time" data-nonce="<?php echo wp_create_nonce( 'booking_available_times' ) ?>" required>
 		<span class="booking_time_empty_slot_notice"><?php echo esc_html__( 'هیچ زمانی در تاریخ انتخاب شده موجود نیست.', 'drplus' ) ?></span>
