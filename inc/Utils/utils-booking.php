@@ -385,6 +385,9 @@ class Booking extends Utils {
 			if( !empty( $selected_option['duration'] ) ) {
 				$chunk_duration = (int) $selected_option['duration'];
 			}
+		} elseif( $office['type'] != 'consultation' ) {
+			// For offline visits (non-consultation), set a default chunk duration
+			$chunk_duration = !empty( $office['visit_time'] ) ? (int) $office['visit_time'] : 30;
 		}
 
 		$office_time = Booking::get_times_by_office( $office_id, $specialist );
