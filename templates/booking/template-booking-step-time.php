@@ -15,10 +15,6 @@ if( !$specialist ) {
 	return; // Exit from file
 }
 
-$show_only_consultation_offices = false;
-if( !empty( $_GET['consultation'] ) ) {
-	$show_only_consultation_offices = true;
-}
 
 $active_consultation_offices = array_keys( Booking::consultation_offices( true ) );
 $is_instant_chat_available = in_array( 'instant_chat_consultation', $active_consultation_offices );
@@ -26,8 +22,8 @@ $is_instant_chat_available = in_array( 'instant_chat_consultation', $active_cons
 $book_offices = [];
 foreach( $specialist->offices as $office ) {
 	if( !Utils::to_bool( $office['enable_booking'] ?? 0 ) ) continue;
-	if( $office['type'] == 'consultation' && ( !$specialist->online_visit || !in_array( $office['id'], $active_consultation_offices ) ) ) continue;
-	if( $office['type'] != 'consultation' && ( !$specialist->offline_visit || $show_only_consultation_offices ) ) continue;
+	if( $office['type'] == 'consultation' && !$specialist->online_visit ) continue;
+	if( $office['type'] != 'consultation' && !$specialist->offline_visit ) continue;
 
 	if( !isset( $office['max_booking_days'] ) ) $office['max_booking_days'] = "";
 	if( !isset( $office['custom_off_days'] ) ) $office['custom_off_days'] = [];
@@ -35,11 +31,6 @@ foreach( $specialist->offices as $office ) {
 	$book_offices[$office['id']] = $office;
 }
 
-if( !empty( $_GET['in_person_visit'] ) ) {
-	foreach( $book_offices as $id => $office ) {
-		if( $office['type'] == 'consultation' ) unset($book_offices[$id]);
-	}
-}
 
 if( empty( $book_offices ) ) {
 	Alert::view( [
