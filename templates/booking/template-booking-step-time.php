@@ -236,7 +236,7 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 					?>
 					<div class="booking-duration-option<?php echo $selected_class; ?>" data-duration-index="<?php echo $index; ?>">
 						<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
-						<span class="booking-duration-price"><?php echo esc_html( $price_label ); ?></span>
+						<span class="booking-duration-price"><?php echo esc_html( sprintf( __( 'شروع قیمت از %s', 'drplus' ), $price_label ) ); ?></span>
 					</div>
 					<?php
 				}

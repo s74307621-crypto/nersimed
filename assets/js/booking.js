@@ -180,7 +180,7 @@
 									specialist: bookingData.specialistID,
 									chunk: bookingData.chunkTimes[selectedOfficeID],
 									duration_index: durationIndex,
-									nonce: $('#booking-time').attr('data-nonce')
+									nonce: $('#booking-time').attr('data-nonce') || ''
 								}
 							});
 
