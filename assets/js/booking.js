@@ -170,15 +170,38 @@
 							// Get selected duration index
 							let durationIndex = $('#booking-duration-index').val() || 0;
 							
-							// Ensure nonce is available
+							// Ensure nonce is available - always get fresh nonce from the hidden input
 							let nonceValue = $('#booking-time').attr('data-nonce');
 							if (!nonceValue || nonceValue === '') {
 								// Try to get nonce from a global variable if available
 								if (typeof bookingData !== 'undefined' && bookingData.nonce) {
 									nonceValue = bookingData.nonce;
+								} else if (typeof drplusVars !== 'undefined' && drplusVars.nonce) {
+									nonceValue = drplusVars.nonce;
 								} else {
-									nonceValue = drplusVars.nonce || '';
+									// If still no nonce, show error and return
+									console.error("Nonce not found!");
+									$('.booking-times-error-alert').css('display', 'flex');
+									$('.booking-times-wrap').hide();
+									return [];
 								}
+							}
+							
+							// Ensure all required parameters are available
+							let specialistID = bookingData.specialistID || '';
+							let chunkTimes = bookingData.chunkTimes[selectedOfficeID] || '';
+							
+							if (!specialistID || !selectedOfficeID || !formattedDate || !chunkTimes || !nonceValue) {
+								console.error("Missing required parameters:", {
+									specialist: specialistID,
+									office: selectedOfficeID,
+									date: formattedDate,
+									chunk: chunkTimes,
+									nonce: nonceValue
+								});
+								$('.booking-times-error-alert').css('display', 'flex');
+								$('.booking-times-wrap').hide();
+								return [];
 							}
 							
 							const res = await $.ajax({
@@ -188,8 +211,8 @@
 									action: 'drplus_get_available_times',
 									date: formattedDate,
 									office: selectedOfficeID,
-									specialist: bookingData.specialistID,
-									chunk: bookingData.chunkTimes[selectedOfficeID],
+									specialist: specialistID,
+									chunk: chunkTimes,
 									duration_index: durationIndex,
 									nonce: nonceValue
 								}

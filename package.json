@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "terser": "^5.48.0"
+    "terser": "^5.48.0",
+    "uglify-js": "^3.19.3"
   }
 }
