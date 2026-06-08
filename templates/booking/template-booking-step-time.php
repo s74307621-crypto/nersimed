@@ -217,8 +217,9 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 	<!-- Consultation duration selector for online consultations - MUST be before calendar -->
 	<?php 
 	$selected_office_data = $book_offices[$selected_office_id] ?? [];
-	// Show duration selector ONLY for consultation (online) offices
-	if( $selected_office_data['type'] == 'consultation' && !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) ) { 
+	// Show duration selector ONLY for consultation (online) offices with visit_time_options
+	$show_duration_selector = ( $selected_office_data['type'] == 'consultation' && !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) );
+	if( $show_duration_selector ) { 
 	?>
 	<div class="booking-consultation-duration-selector">
 		<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
@@ -228,7 +229,8 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 				$duration_label = sprintf( _n( '%d دقیقه', '%d دقیقه', $option['duration'], 'drplus' ), $option['duration'] );
 				$price_label = !empty( $option['price'] ) ? Formatters::price( $option['price'] ) : __( 'تعیین نشده', 'drplus' );
 				$selected_class = ( $index === 0 ) ? ' selected' : '';
-				$disabled_class = empty( $option['price'] ) ? ' disabled' : '';
+				// Don't disable options even if price is empty - just show the price as "تعیین نشده"
+				$disabled_class = '';
 				?>
 				<div class="booking-duration-option<?php echo $selected_class . $disabled_class; ?>" data-duration-index="<?php echo $index; ?>">
 					<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
@@ -238,8 +240,35 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 			}
 			?>
 		</div>
-		<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0" required>
+		<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0">
+		<!-- Debug info -->
+		<div id="booking-debug-info" style="margin-top:10px;padding:10px;background:#f0f0f0;border:1px solid #ccc;font-size:12px;"></div>
 	</div>
+	<script>
+	jQuery(document).ready(function($){
+		function updateDebugInfo() {
+			var officeType = '<?php echo $selected_office_data['type']; ?>';
+			var hasOptions = <?php echo !empty( $selected_office_data['visit_time_options'] ) ? 'true' : 'false'; ?>;
+			var optionsCount = <?php echo count( $selected_office_data['visit_time_options'] ?? [] ); ?>;
+			var selectedDuration = $('#booking-duration-index').val();
+			$('#booking-debug-info').html(
+				'<strong>Debug Info:</strong><br>' +
+				'Office Type: ' + officeType + '<br>' +
+				'Has Visit Time Options: ' + hasOptions + '<br>' +
+				'Options Count: ' + optionsCount + '<br>' +
+				'Selected Duration Index: ' + selectedDuration + '<br>' +
+				'Show Duration Selector: <?php echo $show_duration_selector ? 'YES' : 'NO'; ?>'
+			);
+		}
+		updateDebugInfo();
+		$(document).on('click', '.booking-duration-option', function(){
+			setTimeout(updateDebugInfo, 100);
+		});
+	});
+	</script>
+	<?php } else { ?>
+		<!-- No duration selector needed for this office type -->
+		<input type="hidden" name="booking_duration_index" id="booking-duration-index" value="0">
 	<?php } ?>
 
 	<div class="booking-calendar-wrap">
