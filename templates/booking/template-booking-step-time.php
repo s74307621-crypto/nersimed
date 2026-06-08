@@ -228,20 +228,22 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 		<!-- Consultation duration selector for online consultations -->
 		<?php 
 		$selected_office_data = $book_offices[$selected_office_id] ?? [];
-		// Only show duration selector for consultation (online) offices, not for offline visits
-		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && !empty( array_filter( wp_list_pluck( $selected_office_data['visit_time_options'], 'price' ) ) ) && $selected_office_data['type'] == 'consultation' ) { 
+		// Show duration selector for consultation (online) offices if visit_time_options exists
+		// Don't filter by price here - show all options and let JS handle disabled state
+		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && $selected_office_data['type'] == 'consultation' ) { 
 		?>
 		<div class="booking-consultation-duration-selector">
 			<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
 			<div class="booking-duration-options">
 				<?php 
 				foreach( $selected_office_data['visit_time_options'] as $index => $option ) {
-					if( empty( $option['price'] ) ) continue;
+					// Show all duration options regardless of price (price might be empty initially)
 					$duration_label = sprintf( _n( '%d دقیقه', '%d دقیقه', $option['duration'], 'drplus' ), $option['duration'] );
-					$price_label = Formatters::price( $option['price'] );
+					$price_label = !empty( $option['price'] ) ? Formatters::price( $option['price'] ) : __( 'تعیین نشده', 'drplus' );
 					$selected_class = ( $index === 0 ) ? ' selected' : '';
+					$disabled_class = empty( $option['price'] ) ? ' disabled' : '';
 					?>
-					<div class="booking-duration-option<?php echo $selected_class; ?>" data-duration-index="<?php echo $index; ?>">
+					<div class="booking-duration-option<?php echo $selected_class . $disabled_class; ?>" data-duration-index="<?php echo $index; ?>">
 						<span class="booking-duration-label"><?php echo esc_html( $duration_label ); ?></span>
 						<span class="booking-duration-price"><?php echo esc_html( sprintf( __( 'شروع قیمت از %s', 'drplus' ), $price_label ) ); ?></span>
 					</div>
