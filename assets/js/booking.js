@@ -192,11 +192,16 @@
 							let chunkTimes = bookingData.chunkTimes[selectedOfficeID] || '';
 							
 
-							// If chunkTimes is empty, use a default value
-							if (!chunkTimes || chunkTimes === '') {
-								console.log("Using default chunk time for office:", selectedOfficeID);
-								chunkTimes = '10'; // Default to 10 minutes if not specified
-							}
+                                                        // If chunkTimes is empty, try to get duration from visit_time_options
+                                                        if (!chunkTimes || chunkTimes === '') {
+                                                                // Get duration from selected visit_time_options
+                                                                let visitTimeOptions = bookingData.visitTimeOptions[selectedOfficeID];
+                                                                if (visitTimeOptions && Array.isArray(visitTimeOptions) && visitTimeOptions[durationIndex]) {
+                                                                        chunkTimes = visitTimeOptions[durationIndex].duration || '10';
+                                                                } else {
+                                                                        chunkTimes = '10'; // Default fallback
+                                                                }
+                                                        }
 							if (!specialistID || !selectedOfficeID || !formattedDate || !nonceValue) {
 								console.error("Missing required parameters:", {
 									specialist: specialistID,
