@@ -292,11 +292,12 @@ class Booking extends Utils {
 								}
 								if( $min_price !== null && $min_price > 0 ) {
 									$price = sprintf( Formatters::price( $min_price, true ) );
+									$price_text = sprintf( __( 'شروع قیمت از %s', 'drplus' ), $price );
 								} else {
-									$price = esc_html__( 'Free!', 'drplus' );
+									$price_text = esc_html__( 'Free!', 'drplus' );
 								}
 								// Add class for multiple durations
-								echo '<span class="has-multiple-durations">' . apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price, $office ) . '</span>';
+								echo '<span class="has-multiple-durations">' . apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price_text, $office ) . '</span>';
 							} else {
 								$price = !empty( $office['visit_price'] ) ? sprintf( Formatters::price( $office['visit_price'], true ) ) : esc_html__( 'Free!', 'drplus' );
 								echo apply_filters( 'drplus/booking/specialist_office/visit_price_text', $price, $office );
