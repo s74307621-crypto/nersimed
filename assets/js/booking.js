@@ -191,7 +191,13 @@
 							let specialistID = bookingData.specialistID || '';
 							let chunkTimes = bookingData.chunkTimes[selectedOfficeID] || '';
 							
-							if (!specialistID || !selectedOfficeID || !formattedDate || !chunkTimes || !nonceValue) {
+
+							// If chunkTimes is empty, use a default value
+							if (!chunkTimes || chunkTimes === '') {
+								console.log("Using default chunk time for office:", selectedOfficeID);
+								chunkTimes = '10'; // Default to 10 minutes if not specified
+							}
+							if (!specialistID || !selectedOfficeID || !formattedDate || !nonceValue) {
 								console.error("Missing required parameters:", {
 									specialist: specialistID,
 									office: selectedOfficeID,

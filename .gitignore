@@ -1,10 +1,15 @@
 ```
+# Build artifacts
+*.min.js
+
 # Dependencies
 node_modules/
 
-# Compressed/minified assets
-*.min.js
+# Logs and temp files
+*.log
+*.tmp
 
-# Package lock file (already tracked)
-package-lock.json
+# Editors
+.vscode/
+.idea/
 ```
