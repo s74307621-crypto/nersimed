@@ -228,7 +228,8 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 		<!-- Consultation duration selector for online consultations -->
 		<?php 
 		$selected_office_data = $book_offices[$selected_office_id] ?? [];
-		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && !empty( array_filter( wp_list_pluck( $selected_office_data['visit_time_options'], 'price' ) ) ) ) { 
+		// Only show duration selector for consultation (online) offices, not for offline visits
+		if( !empty( $selected_office_data['visit_time_options'] ) && is_array( $selected_office_data['visit_time_options'] ) && !empty( array_filter( wp_list_pluck( $selected_office_data['visit_time_options'], 'price' ) ) ) && $selected_office_data['type'] == 'consultation' ) { 
 		?>
 		<div class="booking-consultation-duration-selector">
 			<label class="input-label"><?php esc_html_e( 'انتخاب مدت زمان مشاوره', 'drplus' ); ?></label>
