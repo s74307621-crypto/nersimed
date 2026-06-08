@@ -28,6 +28,19 @@ foreach( $specialist->offices as $office ) {
 
 	if( !isset( $office['max_booking_days'] ) ) $office['max_booking_days'] = "";
 	if( !isset( $office['custom_off_days'] ) ) $office['custom_off_days'] = [];
+	
+	// Ensure visit_time is set for consultation offices with visit_time_options
+	if( $office['type'] == 'consultation' && !empty( $office['visit_time_options'] ) && is_array( $office['visit_time_options'] ) ) {
+		// Use the first duration option's duration as the default visit_time (chunk time)
+		$first_option = reset( $office['visit_time_options'] );
+		if( !empty( $first_option['duration'] ) ) {
+			$office['visit_time'] = (string) $first_option['duration'];
+		} else {
+			$office['visit_time'] = '10'; // Default fallback
+		}
+	} elseif( !isset( $office['visit_time'] ) || $office['visit_time'] === '' ) {
+		$office['visit_time'] = '30'; // Default chunk time for other offices
+	}
 
 	$book_offices[$office['id']] = $office;
 }
