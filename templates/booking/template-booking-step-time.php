@@ -22,8 +22,9 @@ $is_instant_chat_available = in_array( 'instant_chat_consultation', $active_cons
 $book_offices = [];
 foreach( $specialist->offices as $office ) {
 	if( !Utils::to_bool( $office['enable_booking'] ?? 0 ) ) continue;
-	if( $office['type'] == 'consultation' && !$specialist->online_visit ) continue;
-	if( $office['type'] != 'consultation' && !$specialist->offline_visit ) continue;
+	// Remove online/offline visit filter to show all services (both online and offline)
+	// if( $office['type'] == 'consultation' && !$specialist->online_visit ) continue;
+	// if( $office['type'] != 'consultation' && !$specialist->offline_visit ) continue;
 
 	if( !isset( $office['max_booking_days'] ) ) $office['max_booking_days'] = "";
 	if( !isset( $office['custom_off_days'] ) ) $office['custom_off_days'] = [];
@@ -173,7 +174,8 @@ wp_localize_script( 'drplus-booking', 'drplusBooking', [
 	'maxBookingDays'			=> wp_list_pluck( $book_offices, 'max_booking_days', 'id' ),
 	'nearestDateTimestamps'		=> $nearest_date_timestamps,
 	'isIranTimezone'			=> Utils::is_iran_timezone(),
-	'isInstantChatAvailable'	=> $is_instant_chat_available
+	'isInstantChatAvailable'	=> $is_instant_chat_available,
+	'nonce'						=> wp_create_nonce( 'booking_available_times' )
 ] );
 
 ?>
