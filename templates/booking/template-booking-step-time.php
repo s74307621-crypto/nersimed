@@ -174,7 +174,7 @@ $selected_office_id = !empty( $_SESSION['booking']['office'] ) ? $_SESSION['book
 wp_localize_script( 'drplus-booking', 'drplusBooking', [
 	'specialistID'				=> $specialist->id,
 	'mainOffice'			=> $main_office_id,
-t'selectedOffice'		=> $selected_office_id,
+	'selectedOffice'				=> $selected_office_id,
 	'offDays'					=> $offices_off_days,
 	'customOffDays'				=> wp_list_pluck( $book_offices, 'custom_off_days', 'id' ),
 	'chunkTimes'				=> wp_list_pluck( $book_offices, 'visit_time', 'id' ),
