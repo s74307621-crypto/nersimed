@@ -153,101 +153,129 @@
 					})();
 				}
 		
-				async function getTimeRanges(unix) {
-					const date = new Date(unix);
-					const year = date.getFullYear();
-					const month = String(date.getMonth() + 1).padStart(2, '0');
-					const day = String(date.getDate()).padStart(2, '0');
-					let formattedDate = `${year}-${month}-${day}`;
-					
-					if (typeof allTimeRanges[selectedOfficeID] != 'undefined' && formattedDate in allTimeRanges[selectedOfficeID]) {
-						return allTimeRanges[selectedOfficeID][formattedDate];
-					} else {
-						// Get from AJAX
-						$('.booking-times-error-alert').hide();
-						$('.booking-times-wrap').show();
-						try {
-							// Get selected duration index
-							let durationIndex = $('#booking-duration-index').val() || 0;
-							
-							// Ensure nonce is available - always get fresh nonce from the hidden input
-							let nonceValue = $('#booking-time').attr('data-nonce');
-							if (!nonceValue || nonceValue === '') {
-								// Try to get nonce from a global variable if available
-								if (typeof bookingData !== 'undefined' && bookingData.nonce) {
-									nonceValue = bookingData.nonce;
-								} else if (typeof drplusVars !== 'undefined' && drplusVars.nonce) {
-									nonceValue = drplusVars.nonce;
-								} else {
-									// If still no nonce, show error and return
-									console.error("Nonce not found!");
-									$('.booking-times-error-alert').css('display', 'flex');
-									$('.booking-times-wrap').hide();
-									return [];
-								}
-							}
-							
-							// Ensure all required parameters are available
-							let specialistID = bookingData.specialistID || '';
-							let chunkTimes = bookingData.chunkTimes[selectedOfficeID] || '';
-							
+async function getTimeRanges(unix) {
+console.log("[booking.js] getTimeRanges called with unix:", unix);
+const date = new Date(unix);
+const year = date.getFullYear();
+const month = String(date.getMonth() + 1).padStart(2, '0');
+const day = String(date.getDate()).padStart(2, '0');
+let formattedDate = `${year}-${month}-${day}`;
 
-                                                        // If chunkTimes is empty, try to get duration from visit_time_options
-                                                        if (!chunkTimes || chunkTimes === '') {
-                                                                // Get duration from selected visit_time_options
-                                                                let visitTimeOptions = bookingData.visitTimeOptions[selectedOfficeID];
-                                                                if (visitTimeOptions && Array.isArray(visitTimeOptions) && visitTimeOptions[durationIndex]) {
-                                                                        chunkTimes = visitTimeOptions[durationIndex].duration || '10';
-                                                                } else {
-                                                                        chunkTimes = '10'; // Default fallback
-                                                                }
-                                                        }
-							if (!specialistID || !selectedOfficeID || !formattedDate || !nonceValue) {
-								console.error("Missing required parameters:", {
-									specialist: specialistID,
-									office: selectedOfficeID,
-									date: formattedDate,
-									chunk: chunkTimes,
-									nonce: nonceValue
-								});
-								$('.booking-times-error-alert').css('display', 'flex');
-								$('.booking-times-wrap').hide();
-								return [];
-							}
-							
-							const res = await $.ajax({
-								url: drplusVars.ajaxUrl,
-								type: 'POST',
-								data: {
-									action: 'drplus_get_available_times',
-									date: formattedDate,
-									office: selectedOfficeID,
-									specialist: specialistID,
-									chunk: chunkTimes,
-									duration_index: durationIndex,
-									nonce: nonceValue
-								}
-							});
+console.log("[booking.js] formattedDate:", formattedDate);
+console.log("[booking.js] selectedOfficeID:", selectedOfficeID);
+console.log("[booking.js] allTimeRanges:", allTimeRanges);
 
-							// Check if the response is successful
-							if( res.success ) {
-								if(typeof allTimeRanges[selectedOfficeID] == "undefined") allTimeRanges[selectedOfficeID] = {}
-								allTimeRanges[selectedOfficeID][formattedDate] = res.data;
-								return res.data;
-							} else {
-								$('.booking-times-error-alert').css('display', 'flex');
-								$('.booking-times-wrap').hide();
-								console.error("Error fetching time ranges:", res.data || res);
-								return [];
-							}
-						} catch (error) {
-							$('.booking-times-error-alert').css('display', 'flex');
-							$('.booking-times-wrap').hide();
-							console.error("Error fetching time ranges:", error);
-							return [];
-						}
-					}
-				}
+if (typeof allTimeRanges[selectedOfficeID] != 'undefined' && formattedDate in allTimeRanges[selectedOfficeID]) {
+console.log("[booking.js] Using cached time ranges for date:", formattedDate);
+return allTimeRanges[selectedOfficeID][formattedDate];
+} else {
+console.log("[booking.js] Fetching time ranges from server for date:", formattedDate);
+// Get from AJAX
+$('.booking-times-error-alert').hide();
+$('.booking-times-wrap').show();
+try {
+// Get selected duration index
+let durationIndex = $('#booking-duration-index').val() || 0;
+console.log("[booking.js] durationIndex:", durationIndex);
+
+// Ensure nonce is available - always get fresh nonce from the hidden input
+let nonceValue = $('#booking-time').attr('data-nonce');
+if (!nonceValue || nonceValue === '') {
+// Try to get nonce from a global variable if available
+if (typeof bookingData !== 'undefined' && bookingData.nonce) {
+nonceValue = bookingData.nonce;
+} else if (typeof drplusVars !== 'undefined' && drplusVars.nonce) {
+nonceValue = drplusVars.nonce;
+} else {
+// If still no nonce, show error and return
+console.error("[booking.js] Nonce not found!");
+$('.booking-times-error-alert').css('display', 'flex');
+$('.booking-times-wrap').hide();
+return [];
+}
+}
+
+// Ensure all required parameters are available
+let specialistID = bookingData.specialistID || '';
+let chunkTimes = bookingData.chunkTimes[selectedOfficeID] || '';
+
+console.log("[booking.js] specialistID:", specialistID);
+console.log("[booking.js] chunkTimes from bookingData:", chunkTimes);
+console.log("[booking.js] visitTimeOptions:", bookingData.visitTimeOptions);
+console.log("[booking.js] visitTimeOptions for selectedOfficeID:", bookingData.visitTimeOptions[selectedOfficeID]);
+
+// If chunkTimes is empty, try to get duration from visit_time_options
+if (!chunkTimes || chunkTimes === '') {
+console.log("[booking.js] chunkTimes is empty, trying to get from visitTimeOptions");
+// Get duration from selected visit_time_options
+let visitTimeOptions = bookingData.visitTimeOptions[selectedOfficeID];
+if (visitTimeOptions && Array.isArray(visitTimeOptions) && visitTimeOptions[durationIndex]) {
+chunkTimes = visitTimeOptions[durationIndex].duration || '10';
+console.log("[booking.js] Got chunkTimes from visitTimeOptions:", chunkTimes);
+} else {
+chunkTimes = '10'; // Default fallback
+console.log("[booking.js] Using default chunkTimes: 10");
+}
+}
+if (!specialistID || !selectedOfficeID || !formattedDate || !nonceValue) {
+console.error("[booking.js] Missing required parameters:", {
+specialist: specialistID,
+office: selectedOfficeID,
+date: formattedDate,
+chunk: chunkTimes,
+nonce: nonceValue
+});
+$('.booking-times-error-alert').css('display', 'flex');
+$('.booking-times-wrap').hide();
+return [];
+}
+
+console.log("[booking.js] Sending AJAX request with params:", {
+action: 'drplus_get_available_times',
+date: formattedDate,
+office: selectedOfficeID,
+specialist: specialistID,
+chunk: chunkTimes,
+duration_index: durationIndex,
+nonce: nonceValue
+});
+
+const res = await $.ajax({
+url: drplusVars.ajaxUrl,
+type: 'POST',
+data: {
+action: 'drplus_get_available_times',
+date: formattedDate,
+office: selectedOfficeID,
+specialist: specialistID,
+chunk: chunkTimes,
+duration_index: durationIndex,
+nonce: nonceValue
+}
+});
+
+console.log("[booking.js] AJAX response:", res);
+
+// Check if the response is successful
+if( res.success ) {
+if(typeof allTimeRanges[selectedOfficeID] == "undefined") allTimeRanges[selectedOfficeID] = {}
+allTimeRanges[selectedOfficeID][formattedDate] = res.data;
+console.log("[booking.js] Time ranges fetched successfully:", res.data);
+return res.data;
+} else {
+$('.booking-times-error-alert').css('display', 'flex');
+$('.booking-times-wrap').hide();
+console.error("[booking.js] Error fetching time ranges:", res.data || res);
+return [];
+}
+} catch (error) {
+$('.booking-times-error-alert').css('display', 'flex');
+$('.booking-times-wrap').hide();
+console.error("[booking.js] Error fetching time ranges:", error);
+return [];
+}
+}
+}
 				
 				// Function to create <li> elements for each time slot
 				async function createTimeSlotElements(timeSlots) {
