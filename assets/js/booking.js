@@ -170,6 +170,17 @@
 							// Get selected duration index
 							let durationIndex = $('#booking-duration-index').val() || 0;
 							
+							// Ensure nonce is available
+							let nonceValue = $('#booking-time').attr('data-nonce');
+							if (!nonceValue || nonceValue === '') {
+								// Try to get nonce from a global variable if available
+								if (typeof bookingData !== 'undefined' && bookingData.nonce) {
+									nonceValue = bookingData.nonce;
+								} else {
+									nonceValue = drplusVars.nonce || '';
+								}
+							}
+							
 							const res = await $.ajax({
 								url: drplusVars.ajaxUrl,
 								type: 'POST',
@@ -180,7 +191,7 @@
 									specialist: bookingData.specialistID,
 									chunk: bookingData.chunkTimes[selectedOfficeID],
 									duration_index: durationIndex,
-									nonce: $('#booking-time').attr('data-nonce') || ''
+									nonce: nonceValue
 								}
 							});
 
