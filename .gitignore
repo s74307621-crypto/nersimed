@@ -1,6 +1,11 @@
-```
-# Minified JavaScript files
-*.min.js
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+
+# Dependencies
+.venv/
+venv/
+node_modules/
 
 # Logs and temp files
 *.log
@@ -16,26 +21,27 @@
 .vscode/
 .idea/
 
-# Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-.mypy_cache/
-.pytest_cache/
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Build directories
 dist/
 build/
 target/
 .gradle/
 
-# OS generated files
+# Python specific
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# System files
 .DS_Store
 Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
+.zshrc.swp
 
 # Compressed files
 *.zip
@@ -60,4 +66,1135 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-```
+
+# C/C++ compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.out
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Go compiled files
+*.exe
+*.dll
+*.so
+
+# MyPy cache
+.mypy_cache/
+.pytest_cache/
+
+# Temporary files
+*~
+*.bak
+*.swp
+*.swo
+
+# IDE specific
+.nyc_output/
+.jscs_cache/
+.jshint-cache/
+
+# Documentation builds
+_site/
+_sass-cache/
+.jekyll-metadata
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bower
+bower_components/
+
+# Composer
+vendor/
+
+# Ruby
+.bundle/
+Gemfile.lock
+
+# Python virtual environments
+Pipfile.lock
+poetry.lock
+
+# Rust
+Cargo.lock
+target/
+
+# Julia
+julia-*/
+.JuliaUserPrefs.toml
+
+# Zig
+zig*/
+
+# Elixir
+mix.lock
+erl_crash.dump
+
+# PHP
+composer.lock
+vendor/
+
+# .NET
+bin/
+obj/
+*.userprefs
+*.pidb
+*.suo
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*.docstates
+*.userosscache
+*.sln.docstates
+
+# Android
+*.keystore
+*.jks
+captures/
+.externalNativeBuild/
+
+# iOS
+*.mobileprovision
+*.xcuserstate
+*.xccheckout
+*.xcscheme
+*.xcodeproj/
+*.xcworkspace/
+*.playground/
+DerivedData/
+build/
+
+# Qt
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+*.moc.cpp
+*.qm
+*.prl
+*.pri
+*.prf
+*.pc
+*.pc.in
+*.pcd
+*.pcd.in
+*.pcmk
+*.pcmk.in
+*.pcmkf
+*.pcmkf.in
+*.pcmkd
+*.pcmkd.in
+*.pcmkdf
+*.pcmkdf.in
+*.pcmkdfg
+*.pcmkdfg.in
+*.pcmkdfgh
+*.pcmkdfgh.in
+*.pcmkdfghi
+*.pcmkdfghi.in
+*.pcmkdfghij
+*.pcmkdfghij.in
+*.pcmkdfghijk
+*.pcmkdfghijk.in
+*.pcmkdfghijkl
+*.pcmkdfghijkl.in
+*.pcmkdfghijklm
+*.pcmkdfghijklm.in
+*.pcmkdfghijklmn
+*.pcmkdfghijklmn.in
+*.pcmkdfghijklmno
+*.pcmkdfghijklmno.in
+*.pcmkdfghijklmnop
+*.pcmkdfghijklmnop.in
+*.pcmkdfghijklmnopq
+*.pcmkdfghijklmnopq.in
+*.pcmkdfghijklmnopqr
+*.pcmkdfghijklmnopqr.in
+*.pcmkdfghijklmnopqrs
+*.pcmkdfghijklmnopqrs.in
+*.pcmkdfghijklmnopqrst
+*.pcmkdfghijklmnopqrst.in
+*.pcmkdfghijklmnopqrstu
+*.pcmkdfghijklmnopqrstu.in
+*.pcmkdfghijklmnopqrstuv
+*.pcmkdfghijklmnopqrstuv.in
+*.pcmkdfghijklmnopqrstuvw
+*.pcmkdfghijklmnopqrstuvw.in
+*.pcmkdfghijklmnopqrstuvwx
+*.pcmkdfghijklmnopqrstuvwx.in
+*.pcmkdfghijklmnopqrstuvwxy
+*.pcmkdfghijklmnopqrstuvwxy.in
+*.pcmkdfghijklmnopqrstuvwxyz
+*.pcmkdfghijklmnopqrstuvwxyz.in
+
+# Webpack
+webpack.config.js
+webpack.config.babel.js
+webpack.config.ts
+webpack.config.babel.ts
+
+# TypeScript
+*.tsbuildinfo
+*.tsx
+*.jsx
+
+# CSS
+*.css.map
+*.scss
+*.sass
+*.less
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Backup files
+*~
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+
+# Log files
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary folders
+tmp/
+temp/
+cache/
+
+# Configuration files
+config/
+settings/
+environment/
+.envrc
+.gitlab-ci.yml
+.travis.yml
+appveyor.yml
+circle.yml
+codeship-services.yml
+codeship-steps.yml
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Kubernetes
+kubernetes/
+k8s/
+.kubeconfig
+
+# AWS
+.aws/
+.aws-sam/
+.serverless/
+
+# Azure
+.azure/
+azure-pipelines.yml
+
+# Google Cloud
+.gcloud/
+gcp/
+google-cloud-sdk/
+
+# Vagrant
+.vagrant/
+Vagrantfile
+
+# VirtualBox
+*.vdi
+*.vbox
+*.vbox-prev
+
+# VMware
+*.vmdk
+*.vmx
+*.nvram
+*.vmxf
+*.vmsd
+*.vmsn
+*.vmss
+*.vswp
+*.vmem
+
+# Parallels
+*.pvm
+*.hdd
+*.pmem
+*.swp
+
+# VMWare Fusion
+*.vmwarevm
+
+# Virtual PC
+*.vmc
+*.vsv
+*.vhd
+*.vhdx
+
+# Xen
+*.xva
+*.img
+
+# QEMU
+*.qcow2
+*.qcow
+*.raw
+*.vmdk
+*.vdi
+*.vhdx
+
+# KVM
+*.qcow2
+*.qcow
+*.raw
+*.vmdk
+*.vdi
+*.vhdx
+
+# VirtualBox
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+
+# Hyper-V
+*.vhdx
+*.vhd
+*.avhd
+*.avhdx
+*.bak
+
+# Docker
+*.dockerfile
+*.dockerignore
+*.docker-compose.yml
+
+# Kubernetes
+*.k8s.yaml
+*.k8s.yml
+*.kubeconfig
+
+# Helm
+*.helm/
+*.charts/
+
+# Terraform
+*.tfstate
+*.tfvars
+*.tfplan
+*.tfstate.backup
+*.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.ansible/
+*.inventory
+*.hosts
+
+# Puppet
+*.puppet/
+*.manifests
+
+# Chef
+*.chef/
+*.cookbooks
+*.roles
+
+# Salt
+*.salt/
+*.states
+*.pillar
+
+# Jenkins
+*.jenkins/
+*.jobs/
+*.plugins/
+
+# GitLab CI
+*.gitlab-ci.yml
+*.gitlab/
+
+# GitHub Actions
+*.github/workflows/
+*.github/actions/
+
+# CircleCI
+*.circleci/
+*.circle/
+
+# Travis CI
+*.travis.yml
+*.travis/
+
+# AppVeyor
+*.appveyor.yml
+*.appveyor/
+
+# Codecov
+*.codecov.yml
+*.codecov/
+
+# Coveralls
+*.coveralls.yml
+*.coveralls/
+
+# SonarQube
+*.sonar-project.properties
+*.sonar/
+
+# ESLint
+*.eslintrc
+*.eslintignore
+*.eslintcache
+
+# Prettier
+*.prettierrc
+*.prettierignore
+*.prettier.config.js
+
+# Stylelint
+*.stylelintrc
+*.stylelintignore
+
+# Babel
+*.babelrc
+*.babel.config.js
+
+# PostCSS
+*.postcss.config.js
+*.postcssrc
+
+# Jest
+*.jest.config.js
+*.jestrc
+
+# Mocha
+*.mocha.opts
+*.mochacss
+*.mochawesome.json
+
+# Cypress
+*.cypress/
+*.cypress.json
+
+# Playwright
+*.playwright/
+*.playwright.config.js
+
+# Selenium
+*.selenium/
+*.seleniumrc
+
+# Protractor
+*.protractor.conf.js
+*.protractor.conf.ts
+
+# Karma
+*.karma.conf.js
+*.karma.conf.ts
+
+# WebdriverIO
+*.wdio.conf.js
+*.wdio.conf.ts
+
+# TestCafe
+*.testcafe/
+*.testcaferc.json
+
+# Nightwatch
+*.nightwatch.conf.js
+*.nightwatch.json
+
+# Cucumber
+*.cucumber/
+*.cucumber.json
+
+# SpecFlow
+*.specflow/
+*.specflow.json
+
+# Behave
+*.behave/
+*.behave.ini
+
+# Robot Framework
+*.robot/
+*.robot.ini
+
+# PyTest
+*.pytest.ini
+*.pytest.cache/
+
+# Nose
+*.nose/
+*.noserc
+
+# Unittest
+*.unittest/
+*.unittest.ini
+
+# JUnit
+*.junit/
+*.junit.xml
+
+# TestNG
+*.testng/
+*.testng.xml
+
+# MSTest
+*.mstest/
+*.mstest.runsettings
+
+# XUnit
+*.xunit/
+*.xunit.xml
+
+# NUnit
+*.nunit/
+*.nunit.xml
+
+# MbUnit
+*.mbunit/
+*.mbunit.xml
+
+# Gallio
+*.gallio/
+*.gallio.xml
+
+# Pex
+*.pex/
+*.pex.xml
+
+# Code Contracts
+*.cc/
+*.cc.xml
+
+# FxCop
+*.fxcop/
+*.fxcop.xml
+
+# StyleCop
+*.stylecop/
+*.stylecop.xml
+
+# Resharper
+*.resharper/
+*.DotSettings
+*.DotSettings.user
+
+# Rider
+*.rider/
+*.DotSettings
+*.DotSettings.user
+
+# Visual Studio Code
+*.vscode/
+*.vscode/settings.json
+*.vscode/tasks.json
+*.vscode/launch.json
+*.vscode/extensions.json
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.VC.db
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+*.ilk
+*.iobj
+*.ipch
+*.tlog
+*.obj/
+*.pch/
+*.res/
+*.aps
+*.ncb
+*.opt
+*.plg
+*.cvsignore
+*.VC.VC.opendb
+*.VC.db
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.VC.opendb-shm
+*.VC.VC.opendb-wal
+*.VC.db-shm
+*.VC.db-wal
+*.opensdf-shm
+*.opensdf-wal
+*.sdf-shm
+*.sdf-wal
+
+# Jetbrains IDEs
+*.idea/
+*.iml
+*.iws
+*.jbds_aspects
+*.aspects
+*.ajl
+*.apc
+*.apw
+*.apx
+*.apy
+*.apz
+*.aqc
+*.aqd
+*.aqe
+*.aqf
+*.aqg
+*.aqh
+*.aqi
+*.aqj
+*.aqk
+*.aql
+*.aqm
+*.aqn
+*.aqo
+*.aqp
+*.aqq
+*.aqr
+*.aqs
+*.aqt
+*.aqu
+*.aqv
+*.aqw
+*.aqx
+*.aqy
+*.aqz
+*.ara
+*.arb
+*.arc
+*.ard
+*.are
+*.arf
+*.arg
+*.arh
+*.ari
+*.arj
+*.ark
+*.arl
+*.arm
+*.arn
+*.aro
+*.arp
+*.arq
+*.arr
+*.ars
+*.art
+*.aru
+*.arv
+*.arw
+*.arx
+*.ary
+*.arz
+*.asa
+*.asb
+*.asc
+*.asd
+*.ase
+*.asf
+*.asg
+*.ash
+*.asi
+*.asj
+*.ask
+*.asl
+*.asm
+*.asn
+*.aso
+*.asp
+*.asq
+*.asr
+*.ass
+*.ast
+*.asu
+*.asv
+*.asw
+*.asx
+*.asy
+*.asz
+*.ata
+*.atb
+*.atc
+*.atd
+*.ate
+*.atf
+*.atg
+*.ath
+*.ati
+*.atj
+*.atk
+*.atl
+*.atm
+*.atn
+*.ato
+*.atp
+*.atq
+*.atr
+*.ats
+*.att
+*.atu
+*.atv
+*.atw
+*.atx
+*.aty
+*.atz
+*.aua
+*.aub
+*.auc
+*.aud
+*.aue
+*.auf
+*.aug
+*.auh
+*.aui
+*.auj
+*.auk
+*.aul
+*.aum
+*.aun
+*.auo
+*.aup
+*.auq
+*.aur
+*.aus
+*.aut
+*.auu
+*.auv
+*.auw
+*.aux
+*.auy
+*.auz
+*.ava
+*.avb
+*.avc
+*.avd
+*.ave
+*.avf
+*.avg
+*.avh
+*.avi
+*.avj
+*.avk
+*.avl
+*.avm
+*.avn
+*.avo
+*.avp
+*.avq
+*.avr
+*.avs
+*.avt
+*.avu
+*.avv
+*.avw
+*.avx
+*.avy
+*.avz
+*.awa
+*.awb
+*.awc
+*.awd
+*.awe
+*.awf
+*.awg
+*.awh
+*.awi
+*.awj
+*.awk
+*.awl
+*.awm
+*.awn
+*.awo
+*.awp
+*.awq
+*.awr
+*.aws
+*.awt
+*.awu
+*.awv
+*.aww
+*.awx
+*.awy
+*.awz
+*.axa
+*.axb
+*.axc
+*.axd
+*.axe
+*.axf
+*.axg
+*.axh
+*.axi
+*.axj
+*.axk
+*.axl
+*.axm
+*.axn
+*.axo
+*.axp
+*.axq
+*.axr
+*.axs
+*.axt
+*.axu
+*.axv
+*.axw
+*.axx
+*.axy
+*.axz
+*.aya
+*.ayb
+*.ayc
+*.ayd
+*.aye
+*.ayf
+*.ayg
+*.ayh
+*.ayi
+*.ayj
+*.ayk
+*.ayl
+*.aym
+*.ayn
+*.ayo
+*.ayp
+*.ayq
+*.ayr
+*.ays
+*.ayt
+*.ayu
+*.ayv
+*.ayw
+*.ayx
+*.ayy
+*.ayz
+*.aza
+*.azb
+*.azc
+*.azd
+*.aze
+*.azf
+*.azg
+*.azh
+*.azi
+*.azj
+*.azk
+*.azl
+*.azm
+*.azn
+*.azo
+*.azp
+*.azq
+*.azr
+*.azs
+*.azt
+*.azu
+*.azv
+*.azw
+*.azx
+*.azy
+*.azz
+
+# Sublime Text
+*.sublime-workspace
+*.sublimetext
+*.sublime-project
+
+# Emacs
+*.elc
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.el
+*.el~
+*.elc
+*.eln
+*.eln~
+
+# Vim
+*.vim
+*.viminfo
+*.vimrc
+*.exrc
+*.gvimrc
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl
+*.swk
+*.swj
+*.swi
+*.swh
+*.swg
+*.swf
+*.swe
+*.swd
+*.swc
+*.swb
+*.swa
+*.un~
+*.~.kdelock
+*.~.swp
+*.~.swo
+*.~.swn
+*.~.swm
+*.~.swl
+*.~.swk
+*.~.swj
+*.~.swi
+*.~.swh
+*.~.swg
+*.~.swf
+*.~.swe
+*.~.swd
+*.~.swc
+*.~.swb
+*.~.swa
+
+# Atom
+*.atom/
+*.atom/config.cson
+*.atom/packages/
+*.atom/storage/
+
+# Brackets
+*.brackets/
+*.brackets.json
+
+# NetBeans
+*.nbproject/
+*.nb-configuration.xml
+*.nbf
+*.nbp
+*.nbm
+*.nbi
+*.nbj
+*.nbl
+*.nbx
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nbx
+*.nbw
+*.nbv
+*.nbu
+*.nbt
+*.nbs
+*.nbr
+*.nbq
+*.nbp
+*.nbo
+*.nbn
+*.nbm
+*.nbl
+*.nbk
+*.nbj
+*.nbi
+*.nbh
+*.nbg
+*.nbf
+*.nbe
+*.nbd
+*.nbc
+*.nbb
+*.nba
+*.nbz
+*.nby
+*.nb......
